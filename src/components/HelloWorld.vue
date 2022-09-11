@@ -4,8 +4,12 @@
 
     <div class="black-side">
 
-      <p class="date" v-text="date"> </p>
-      <p class="smiley" v-text="smileySelected"> </p>
+      <div class="to-row">
+        <p class="date" v-text="date"> </p>
+        <p class="smiley" v-text="smileySelected"> </p>
+      </div>
+
+      <p class="hi"> Hello friend ! </p>
 
     </div>
 
@@ -79,11 +83,17 @@ export default {
 .black-side {
   background-color: black;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
   height: 100vh;
   width: 100%;
+}
+
+.to-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .date {
@@ -100,6 +110,10 @@ export default {
   background-color: white;
   height: 100vh;
   width: 100%;
+}
+
+.hi {
+  font-size: 25px;
 }
 
 </style>
