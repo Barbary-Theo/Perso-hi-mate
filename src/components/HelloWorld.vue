@@ -2,12 +2,6 @@
 
   <div class="main">
 
-    <div class="bar">
-      <v-avatar class="avatar">
-        <img src="../assets/me.png" alt="Hi, it's me">
-      </v-avatar>
-    </div>
-
     <div class="black-side">
 
       <p class="date" v-text="date"> </p>
@@ -27,7 +21,7 @@
 
 export default {
   name: 'HelloWorld',
-
+  components: {},
   data: () => ({
     date: null,
     displayingDateInterval: null,
@@ -61,7 +55,7 @@ export default {
 
     const smileyListSize = this.smiley.length;
 
-    this.getDateToDisplay();
+    this.date = this.getDateToDisplay();
 
     this.displayingDateInterval = setInterval( () => {
       this.date = this.getDateToDisplay();
@@ -80,7 +74,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .black-side {
   background-color: black;
@@ -106,18 +100,6 @@ export default {
   background-color: white;
   height: 100vh;
   width: 100%;
-}
-
-.bar {
-  position: fixed;
-  top: 3vh;
-  left: 3vh;
-}
-
-.avatar {
-  width: 80px !important;
-  height: auto !important;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 </style>
