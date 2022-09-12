@@ -7,4 +7,6 @@ statut=$(git push);
 if [ $? -eq 0 ]
 then
   echo "sus : $?";
+else
+  echo "non : $?";
 fi
