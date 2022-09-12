@@ -1,3 +1,3 @@
-git add .
-git commit -m 'automatic push by Barbary s script'
-git push
+git add .;
+git commit -m "(automatic push) $1";
+git push;
