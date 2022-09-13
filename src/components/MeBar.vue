@@ -9,6 +9,7 @@
           <v-avatar :class="classe"
                     v-bind="attrs"
                     v-on="on"
+                    rounded
           >
             <img src="../assets/me.png" alt="Hi, it's me">
           </v-avatar>
@@ -83,7 +84,7 @@ export default {
 }
 
 .avatar {
-  width: 10vh !important;
+  width: 14vh !important;
   height: auto !important;
   box-shadow: white 0 0 0 0.18vh;
   transition: box-shadow 1s ease-in-out;
