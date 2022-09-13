@@ -86,8 +86,8 @@ export default {
 .avatar {
   width: 14vh !important;
   height: auto !important;
-  box-shadow: white 0 0 0 0.18vh;
-  transition: box-shadow 1s ease-in-out;
+  box-shadow: white 0 0 0 0.10vh;
+  transition: box-shadow 1s ease;
 }
 
 .noBox {
