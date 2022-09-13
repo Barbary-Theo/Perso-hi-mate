@@ -3,14 +3,14 @@
     <v-main>
 
       <MeBar/>
-      <HelloWorld/>
+      <HiMate/>
 
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import HiMate from './components/HiMate';
 import MeBar from "@/components/MeBar";
 
 export default {
@@ -18,7 +18,7 @@ export default {
 
   components: {
     MeBar,
-    HelloWorld,
+    HiMate,
   },
 
   data: () => ({
