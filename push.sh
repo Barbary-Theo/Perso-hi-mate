@@ -6,7 +6,7 @@ statut=$(git push);
 
 if [ $? -eq 0 ]
 then
-  echo "Push successfully done on $( git rev-parse --abbrev-ref HEAD)";
+  echo "Push successfully done on '$( git rev-parse --abbrev-ref HEAD)' branch";
 else
   git push --set-upstream origin $( git rev-parse --abbrev-ref HEAD);
 fi
