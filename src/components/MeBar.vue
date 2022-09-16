@@ -3,24 +3,22 @@
   <v-container fluid class="bar">
     <v-row>
 
-      <v-tooltip right>
+      <v-avatar :class="classe" @mouseover="hover = true" rounded>
+        <img src="../assets/me.png" alt="Hi, it's me">
+      </v-avatar>
 
-        <template v-slot:activator="{ on, attrs }">
-          <v-avatar :class="classe"
-                    v-bind="attrs"
-                    v-on="on"
-                    rounded
-          >
-            <img src="../assets/me.png" alt="Hi, it's me">
-          </v-avatar>
-        </template>
-        <div class="card">
+
+      <v-card v-if="hover" @mouseleave="hover = false" class="card-hover">
+
+        <v-avatar class="card-avatar" rounded>
+          <img src="../assets/me.png" alt="Hi, it's me">
+        </v-avatar>
+
           <p> Hello mate ! </p>
           <p style="margin-top: 0 !important;"> I'm glad you're here 🤝 </p>
           <hr/>
           <p style="margin-top: 2vh !important"> You can scroll down 😉 </p>
-        </div>
-      </v-tooltip>
+      </v-card>
 
       <span class="group pa-2">
         <v-icon @click="openLinkedin" small color="blue">{{ icon.mdiLinkedin }}</v-icon>
@@ -44,7 +42,8 @@ export default {
     classe: "avatar",
     icon: {
       mdiLinkedin
-    }
+    },
+    hover: false
   }),
 
   methods: {
@@ -79,7 +78,6 @@ export default {
 }
 
 .card {
-
   text-align: center;
 }
 
@@ -92,6 +90,22 @@ export default {
 
 .noBox {
   box-shadow: none;
+}
+
+.card-hover {
+  z-index: 10;
+  position: fixed;
+  top: 1.5vh;
+  left: 1.5vh;
+  text-align: center;
+  width: 15vw;
+  transition: opacity 1s linear;
+}
+
+.card-avatar {
+  width: 12vh !important;
+  height: auto !important;
+  margin-top: 2vh;
 }
 
 </style>
