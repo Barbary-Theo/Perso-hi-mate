@@ -8,17 +8,19 @@
       </v-avatar>
 
 
-      <v-card v-if="hover" @mouseleave="hover = false" class="card-hover">
+      <transition name="fade">
+        <v-card v-if="hover" @mouseleave="hover = false" class="card-hover">
 
-        <v-avatar class="card-avatar" rounded>
-          <img src="../assets/me.png" alt="Hi, it's me">
-        </v-avatar>
+          <v-avatar class="card-avatar" rounded>
+            <img src="../assets/me.png" alt="Hi, it's me">
+          </v-avatar>
 
-          <p> Hello mate ! </p>
-          <p style="margin-top: 0 !important;"> I'm glad you're here 🤝 </p>
+          <p class="margin-2"> Hello mate ! </p>
+          <p> I'm glad you're here 🤝 </p>
           <hr/>
           <p style="margin-top: 2vh !important"> You can scroll down 😉 </p>
-      </v-card>
+        </v-card>
+      </transition>
 
       <span class="group pa-2">
         <v-icon @click="openLinkedin" small color="blue">{{ icon.mdiLinkedin }}</v-icon>
@@ -53,18 +55,6 @@ export default {
     }
   },
 
-  mounted() {
-
-    this.timeOut = setInterval (() => {
-      if(this.classe.includes(" noBox")) {
-        this.classe = this.classe.replace(" noBox", "");
-      }
-      else {
-        this.classe += " noBox";
-      }
-    }, 2000)
-
-  }
 }
 </script>
 
@@ -84,12 +74,7 @@ export default {
 .avatar {
   width: 14vh !important;
   height: auto !important;
-  box-shadow: white 0 0 0 0.10vh;
-  transition: box-shadow 1s ease;
-}
-
-.noBox {
-  box-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 
 .card-hover {
@@ -99,13 +84,31 @@ export default {
   left: 1.5vh;
   text-align: center;
   width: 15vw;
-  transition: opacity 1s linear;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px !important;
 }
 
 .card-avatar {
   width: 12vh !important;
   height: auto !important;
   margin-top: 2vh;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.margin-1 {
+  margin-top: 1vh !important;
+}
+.margin-2 {
+  margin-top: 2vh !important;
+}
+.margin-3 {
+  margin-top: 3vh !important;
 }
 
 </style>
