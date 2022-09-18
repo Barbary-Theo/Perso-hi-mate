@@ -37,7 +37,6 @@
 
 
 import {mdiChevronDown} from "@mdi/js";
-import * as THREE from "three";
 
 export default {
   name: 'HiMate',
@@ -60,48 +59,6 @@ export default {
   }),
 
   methods: {
-
-    threeJsScene() {
-
-      const scene = new THREE.Scene();
-
-      const ambientLight = new THREE.AmbientLight("grey", 0.6);
-      scene.add(ambientLight);
-      scene.background = new THREE.Color("grey")
-
-      const directionalLight = new THREE.DirectionalLight("grey", 0.8);
-      directionalLight.position.set(200, 500, 300);
-      scene.add(directionalLight);
-
-
-      // Setting up camera
-      const aspectRatio = window.innerWidth / window.innerHeight;
-      const cameraWidth = 150;
-      const cameraHeight = cameraWidth / aspectRatio;
-
-      const camera = new THREE.OrthographicCamera(
-          cameraWidth / -2, // left
-          cameraWidth / 2, // right
-          cameraHeight / 2, // top
-          cameraHeight / -2, // bottom
-          0, // near plane
-          10000 // far plane
-      );
-      camera.position.set(250, 200, 200);
-      camera.lookAt(0, 10, 0);
-      camera.scale.x = 5;
-      camera.scale.y = 5;
-      camera.scale.z = 5;
-
-      // Set up renderer
-      const renderer = new THREE.WebGLRenderer({ antialias: false });
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.render(scene, camera);
-
-      document.getElementById("folio-side").appendChild(renderer.domElement);
-
-    },
-
 
     getDateToDisplay: () => {
         let date = new Date();
@@ -169,8 +126,6 @@ export default {
   },
 
   mounted: function () {
-
-    //this.threeJsScene();
 
     const smileyListSize = this.smiley.length;
 
