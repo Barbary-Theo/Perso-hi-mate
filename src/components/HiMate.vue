@@ -27,7 +27,7 @@
 
     <div id="folio-side" class="folio-side">
 
-      <div class="test translateX-animation" id="test" data-aos="fade-right">
+      <div class="test translateX-animation" id="test">
         <p>oui</p>
       </div>
 
@@ -41,7 +41,7 @@
 
 
 import {mdiChevronDown} from "@mdi/js";
-import $ from 'jquery'
+import $ from 'jquery';
 
 export default {
   name: 'HiMate',
@@ -127,17 +127,17 @@ export default {
     },
 
     isScrolledIntoView: (elem) => {
-      var docViewTop = $(window).scrollTop();
-      var docViewBottom = docViewTop + $(window).height();
+      let docViewTop = $(window).scrollTop();
+      let docViewBottom = docViewTop + $(window).height();
 
-      var elemTop = $(elem).offset().top;
-      var elemBottom = elemTop + $(elem).height();
+      let elemTop = $(elem).offset().top;
+      let elemBottom = elemTop + $(elem).height();
 
       return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     },
 
-    initScrollAnimation: () => {
-
+    initScrollAnimation: function () {
+      console.log($("#test"))
       $(window).on("scroll", () => {
         if(!this.alreadyShown && this.isScrolledIntoView("#test")) {
           $("#test").css("transform", "translateX(200px)").css("opacity", 1);
