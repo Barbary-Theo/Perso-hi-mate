@@ -255,7 +255,7 @@ export default {
 .translateX-animation {
   transition-property: transform, opacity;
   opacity: 0;
-  transition: .3s linear;
+  transition: .5s ease;
 }
 
 </style>
