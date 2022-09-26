@@ -134,6 +134,21 @@ export default {
       var elemBottom = elemTop + $(elem).height();
 
       return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    },
+
+    initScrollAnimation: () => {
+
+      $(window).on("scroll", () => {
+        if(!this.alreadyShown && this.isScrolledIntoView("#test")) {
+          $("#test").css("transform", "translateX(200px)").css("opacity", 1);
+          this.alreadyShown = true;
+        }
+        else if (this.alreadyShown && !this.isScrolledIntoView("#test")) {
+          $("#test").css("transform", "translateX(0)").css("opacity", 0);
+          this.alreadyShown = false;
+        }
+      });
+
     }
 
   },
@@ -156,13 +171,7 @@ export default {
 
     this.doAnimationScrollDown();
 
-    $(window).on("scroll", () => {
-      if(!this.alreadyShown && this.isScrolledIntoView("#test")) {
-        $("#test").css("transform", "translateX(200px)").css("opacity", 1);
-        this.alreadyShown = true;
-      }
-    });
-
+    this.initScrollAnimation();
 
   },
 
