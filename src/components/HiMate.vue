@@ -27,6 +27,10 @@
 
     <div id="folio-side" class="folio-side">
 
+      <div class="test translateX-animation" id="test" data-aos="fade-right">
+        <p>oui</p>
+      </div>
+
     </div>
 
   </div>
@@ -37,6 +41,7 @@
 
 
 import {mdiChevronDown} from "@mdi/js";
+import $ from 'jquery'
 
 export default {
   name: 'HiMate',
@@ -53,9 +58,7 @@ export default {
     displayingEmojieInterval: null,
     displayingHelloInterval: null,
     animationScrollDownInterval: null,
-
-    /*  Three js part */
-    containerId: "folio-side"
+    alreadyShown: false
   }),
 
   methods: {
@@ -121,6 +124,16 @@ export default {
 
       }, 500)
 
+    },
+
+    isScrolledIntoView: (elem) => {
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+
+      var elemTop = $(elem).offset().top;
+      var elemBottom = elemTop + $(elem).height();
+
+      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     }
 
   },
@@ -143,6 +156,14 @@ export default {
 
     this.doAnimationScrollDown();
 
+    $(window).on("scroll", () => {
+      if(!this.alreadyShown && this.isScrolledIntoView("#test")) {
+        $("#test").css("transform", "translateX(200px)").css("opacity", 1);
+        this.alreadyShown = true;
+      }
+    });
+
+
   },
 
   beforeDestroy() {
@@ -157,7 +178,7 @@ export default {
 <style scoped>
 
 .black-side {
-  background-color: black;
+  background-color: #FA9923;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,6 +242,20 @@ export default {
 .translate-animationY-bottom {
   transition: transform 0.5s ease;
   transform: translateY(0.6vh);
+}
+
+.test {
+  background-color: black;
+  margin-top: 15vh;
+  height: 200px;
+  width: 200px;
+  color: white;
+}
+
+.translateX-animation {
+  transition-property: transform, opacity;
+  opacity: 0;
+  transition: .3s linear;
 }
 
 </style>

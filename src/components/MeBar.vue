@@ -22,9 +22,16 @@
         </v-card>
       </transition>
 
-      <span class="group pa-2">
-        <v-icon @click="openLinkedin" small color="blue">{{ icon.mdiLinkedin }}</v-icon>
-      </span>
+      <div class="column">
+        <span class="group pa-2">
+          <v-icon @click="openLinkedin" small color="#2382FA">{{ icon.mdiLinkedin }}</v-icon>
+        </span>
+
+        <span class="group pa-2">
+          <v-icon @click="openGitLab" small color="#000000">{{ icon.mdiGitlab }}</v-icon>
+        </span>
+
+      </div>
 
     </v-row>
   </v-container>
@@ -34,7 +41,8 @@
 <script>
 
 import {
-  mdiLinkedin
+  mdiLinkedin,
+  mdiGitlab
 } from '@mdi/js'
 
 export default {
@@ -43,7 +51,8 @@ export default {
   data: () => ({
     classe: "avatar",
     icon: {
-      mdiLinkedin
+      mdiLinkedin,
+      mdiGitlab
     },
     hover: false
   }),
@@ -52,6 +61,10 @@ export default {
 
     openLinkedin: () => {
       window.open("https://www.linkedin.com/in/théo-barbary-047656201/", "_blank")
+    },
+
+    openGitLab: () => {
+      window.open("https://gitlab.com/Barbary-Theo", "_blank")
     }
   },
 
@@ -109,6 +122,11 @@ export default {
 }
 .margin-3 {
   margin-top: 3vh !important;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
 }
 
 </style>
