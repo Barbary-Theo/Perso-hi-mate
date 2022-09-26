@@ -155,6 +155,8 @@ export default {
 
   mounted: function () {
 
+    document.title = '🌈 Barbary';
+
     const smileyListSize = this.smiley.length;
 
     this.date = this.getDateToDisplay();
