@@ -21,7 +21,7 @@
           src="../assets/how-are-you.png"
       ></v-img>
 
-      <v-icon color="white" large :class="classeIcon">{{ icon.mdiChevronDown }}</v-icon>
+      <v-icon color="white" id="to-scroll" large :class="classeIcon">{{ icon.mdiChevronDown }}</v-icon>
 
     </div>
 
@@ -137,7 +137,6 @@ export default {
     },
 
     initScrollAnimation: function () {
-      console.log($("#test"))
       $(window).on("scroll", () => {
         if(!this.alreadyShown && this.isScrolledIntoView("#test")) {
           $("#test").css("transform", "translateX(200px)").css("opacity", 1);
@@ -149,32 +148,39 @@ export default {
         }
       });
 
+    },
+
+    initParams: function () {
+      const smileyListSize = this.smiley.length;
+      document.title = '🌈 Barbary';
+      this.date = this.getDateToDisplay();
+
+      this.displayingDateInterval = setInterval( () => {
+        this.date = this.getDateToDisplay();
+      }, 1000);
+
+      this.displayingEmojieInterval = setInterval( () => {
+        this.smileySelected = this.smiley[Math.round(Math.random() * smileyListSize)];
+      }, 300);
+
+
+    },
+
+    initEvent: function () {
+      this.initScrollAnimation();
+
+      $("#to-scroll").on("click", () => {
+        window.scroll({top: window.innerHeight, left: 0, behavior: 'smooth'})
+      })
     }
 
   },
 
   mounted: function () {
-
-    document.title = '🌈 Barbary';
-
-    const smileyListSize = this.smiley.length;
-
-    this.date = this.getDateToDisplay();
-
-    this.displayingDateInterval = setInterval( () => {
-      this.date = this.getDateToDisplay();
-    }, 1000);
-
-    this.displayingEmojieInterval = setInterval( () => {
-        this.smileySelected = this.smiley[Math.round(Math.random() * smileyListSize)];
-    }, 300);
-
+    this.initParams();
+    this.initEvent()
     this.showAndHideSentence();
-
     this.doAnimationScrollDown();
-
-    this.initScrollAnimation();
-
   },
 
   beforeDestroy() {
