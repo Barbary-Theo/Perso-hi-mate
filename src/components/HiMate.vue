@@ -202,7 +202,7 @@ export default {
   justify-content: center;
   color: white;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 .to-row {
@@ -224,7 +224,7 @@ export default {
 .folio-side {
   background-color: white;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 .hi {
