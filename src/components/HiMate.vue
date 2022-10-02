@@ -15,7 +15,28 @@
             <v-icon class="icon" color="orange" x-small>{{ icon.mdiBrightness1 }}</v-icon>
             <v-icon class="icon" color="green" x-small>{{ icon.mdiBrightness1 }}</v-icon>
           </div>
-          <div class="menu-console-text">Barbary</div>
+          <div class="menu-console-text">Barbary's console</div>
+        </div>
+        <div class="menu-content">
+          <p> Barbary-content-readme ~ % cat me</p>
+          <p class="json-me"> &nbsp;&nbsp;me = { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: 'Barbary Théo',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nationality: 'French',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current_location: 'North of France',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work: {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Role: 'Software engineer',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Company: 'Toyota Motor Manufacturing France',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;School: 'INSA Hauts-de-France',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Social: {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;linkedIn: 'https://www.linkedin.com/in/théo-barbary-047656201/',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gitlab: 'https://gitlab.com/Barbary-Theo',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gmail: 'theo.barbary25@gmail.com',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phone: '(+33) 06.24.19.10.35',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;}</p>
+            <p> Barbary-content-readme ~ % </p>
+
         </div>
       </div>
 
@@ -114,7 +135,7 @@ export default {
 .menu-console-text {
   color: black;
   font-weight: bold;
-  font-size: 1.5vh;
+  font-size: 0.9vw;
   align-items: center;
   vertical-align: middle;
   padding: 0.5vh;
@@ -133,6 +154,18 @@ export default {
   transition-property: transform, opacity;
   opacity: 0;
   transition: .5s ease;
+}
+
+.menu-content {
+  color: black;
+  padding: 1vw;
+  font-size: 0.9vw;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  overflow: scroll;
+}
+
+.json-me {
+  font-size: 0.8vw;
 }
 
 </style>

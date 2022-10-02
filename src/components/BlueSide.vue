@@ -202,7 +202,7 @@ export default {
 
 .icon-down {
   position: absolute;
-  top: 95vh;
+  top: 93vh;
 }
 
 .translate-animationY-top {
