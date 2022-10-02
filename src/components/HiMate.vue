@@ -18,7 +18,7 @@
           <div class="menu-console-text">Barbary's console</div>
         </div>
         <div class="menu-content">
-          <p> Barbary-content-readme ~ % cat me</p>
+          <p> Barbary-content-readme ~ % cat me.txt</p>
           <p class="json-me"> &nbsp;&nbsp;me = { <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: 'Barbary Théo',<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nationality: 'French',<br>
@@ -35,7 +35,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phone: '(+33) 06.24.19.10.35',<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
             &nbsp;}</p>
-            <p> Barbary-content-readme ~ % </p>
+            <p id="command-line-end" class="command-line-end"> Barbary-content-readme ~ % </p>
 
         </div>
       </div>
@@ -60,7 +60,8 @@ export default {
     icon: { mdiBrightness1 },
     seeOrangeSide: true,
     seeBlueSide: false,
-    alreadyShown: false
+    alreadyShown: false,
+    intervalCommandLine: null
   }),
 
   methods: {
@@ -89,8 +90,22 @@ export default {
 
     },
 
+    initCommandLineAnimation: function() {
+
+      let cptCommandLine = 0;
+      let ele = $("#command-line-end");
+
+      this.intervalCommandLine = setInterval(() => {
+        if(cptCommandLine % 2 === 0) ele.removeClass("command-line-end")
+        else ele.addClass("command-line-end")
+        cptCommandLine ++;
+      }, 600)
+
+    },
+
     initEvent: function () {
       this.initScrollAnimation();
+      this.initCommandLineAnimation();
     }
 
   },
@@ -98,6 +113,10 @@ export default {
   mounted: function () {
     document.title = '🌈 Barbary';
     this.initEvent()
+  },
+
+  beforeDestroy() {
+    this.intervalCommandLine();
   }
 
 }
@@ -166,6 +185,12 @@ export default {
 
 .json-me {
   font-size: 0.8vw;
+}
+
+.command-line-end {
+  padding-right: 0.6vw;
+  border-right: 1px solid black;
+  width: fit-content;
 }
 
 </style>
