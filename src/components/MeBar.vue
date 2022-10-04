@@ -24,11 +24,11 @@
 
       <div class="column">
         <span class="group pa-2">
-          <v-icon @click="openLinkedin" small color="#2382FA">{{ icon.mdiLinkedin }}</v-icon>
+          <v-icon @click="openLinkedin" small color="#2343FD">{{ icon.mdiLinkedin }}</v-icon>
         </span>
 
         <span class="group pa-2">
-          <v-icon @click="openGitLab" small color="#000000">{{ icon.mdiGitlab }}</v-icon>
+          <v-icon @click="openGitLab" small color="#FDBE23">{{ icon.mdiGitlab }}</v-icon>
         </span>
 
       </div>

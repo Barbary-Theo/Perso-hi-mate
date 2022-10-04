@@ -154,7 +154,8 @@ export default {
 <style scoped>
 
 .orange-side {
-  background-color: #FA9923;
+  /*background-color: #547A92;*/
+  background-color: #549284;
   display: flex;
   flex-direction: column;
   align-items: center;
