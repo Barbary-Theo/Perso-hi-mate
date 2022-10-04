@@ -112,57 +112,72 @@ export default {
 
     },
 
-    initEvent: function () {
-      this.initScrollAnimation();
+    enterFunction: function (elem) {
+
+      if(this.textInputed === "show Justine") {
+        this.treatementAfterEnterFunction(elem, `<p class="json-me" style="color: #756A92"> &nbsp;&nbsp; Justine c'est la plus belle 🦋 Et je l'aime 🌈</p>`);
+      }
+      else {
+        this.treatementAfterEnterFunction(elem, `<p class="json-me" style="color: #9E3F3F"> &nbsp;&nbsp; > Unknow command : '${this.textInputed}'</p>`);
+      }
+
+    },
+
+    treatementAfterEnterFunction: function(elem, newBalise) {
+      elem.remove()
+      let menuContent = $("#menu-content");
+      let console = $("#console");
+      menuContent.append(`<p> Barbary-content-readme ~ % ${this.textInputed} </p>`);
+      menuContent.append(newBalise);
+      menuContent.append(`<p id="command-line-end" class="command-line-end"> Barbary-content-readme ~ % </p>`);
+      this.textInputed = "";
       this.initCommandLineAnimation();
+      console.scrollTop(console.height());
+    },
+
+    removeFunction: function (elem) {
+      if(elem.text().length > 28) {
+        this.textInputed = this.textInputed.substring(0, this.textInputed.length - 1);
+        elem.text(elem.text().substring(0, elem.text().length - 1));
+      }
+    },
+
+    initKeyDownEvent: function () {
 
       $(document).on("keydown", (e) => {
         let keyCode = e.originalEvent.keyCode;
         let key = e.originalEvent.key;
         let elem = $("#command-line-end");
 
+        if(keyCode === 32 && e.target === document.body) {
+          e.preventDefault();
+        }
+
         if(key === "Enter") {
-          if(this.textInputed === "show Justine") {
-            elem.remove()
-            let menuContent = $("#menu-content");
-            let console = $("#console");
-            menuContent.append(`<p> Barbary-content-readme ~ % ${this.textInputed} </p>`)
-            menuContent.append(`<p class="json-me" style="color: #756A92"> &nbsp;&nbsp; Justine c'est la plus belle 🦋 Et je l'aime 🌈</p>`)
-            menuContent.append(`<p id="command-line-end" class="command-line-end"> Barbary-content-readme ~ % </p>`)
-            this.textInputed = "";
-            this.initCommandLineAnimation();
-            console.scrollTop(console.height())
-          }
-          else {
-            elem.remove()
-            let menuContent = $("#menu-content");
-            let console = $("#console");
-            menuContent.append(`<p> Barbary-content-readme ~ % ${this.textInputed} </p>`)
-            menuContent.append(`<p class="json-me" style="color: #9E3F3F"> &nbsp;&nbsp; > Unknow command : '${this.textInputed}'</p>`)
-            menuContent.append(`<p id="command-line-end" class="command-line-end"> Barbary-content-readme ~ % </p>`)
-            this.textInputed = "";
-            this.initCommandLineAnimation();
-            console.scrollTop(console.height())
-          }
+         this.enterFunction(elem);
         }
         else if (key === "Backspace") {
-          if(elem.text().length > 28) {
-            this.textInputed = this.textInputed.substring(0, this.textInputed.length - 1);
-            elem.text(elem.text().substring(0, elem.text().length - 1));
-          }
+         this.removeFunction(elem);
         }
         else if((keyCode >= 65 && keyCode <= 90) || keyCode === 32) {
           elem.text(elem.text() + key);
           this.textInputed += key;
         }
-      })
+      });
+
+    },
+
+    initEvent: function () {
+      this.initScrollAnimation();
+      this.initCommandLineAnimation();
+      this.initKeyDownEvent();
     }
 
   },
 
   mounted: function () {
     document.title = '🌈 Barbary';
-    this.initEvent()
+    this.initEvent();
   },
 
   beforeDestroy() {
