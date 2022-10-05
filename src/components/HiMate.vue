@@ -117,9 +117,20 @@ export default {
       if(this.textInputed === "show Justine") {
         this.treatementAfterEnterFunction(elem, `<p class="json-me" style="color: #756A92"> &nbsp;&nbsp; Justine c'est la plus belle 🦋 Et je l'aime 🌈</p>`);
       }
-      else {
-        this.treatementAfterEnterFunction(elem, `<p class="json-me" style="color: #9E3F3F"> &nbsp;&nbsp; > Unknow command : '${this.textInputed}'</p>`);
+      else if(this.textInputed === "hello friend") {
+        this.treatementAfterEnterFunction(elem, `<p class="json-me" style="color: #756A92">
+            &nbsp;&nbsp;&nbsp;&nbsp;- Justine c'est la plus belle 🌈<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Alexandre c'est le plus beau 🐝<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Raphael c'est le plus chaud 🐻<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Damien c'est un coquin 🦄<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Younes c'est le plus malin 🐵<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Roman c'est le plus sportif 🦊<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Basile c'est le plus petit 🐬<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Martin c'est le plus fort 🦋<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Gio il est au max 🐊<br>
+          </p>`);
       }
+      else this.treatementAfterEnterFunction(elem, `<p class="json-me" style="color: #9E3F3F"> &nbsp;&nbsp; > Unknow command : '${this.textInputed}'</p>`);
 
     },
 
@@ -269,7 +280,7 @@ export default {
 }
 
 .command-line-end {
-  padding-right: 0.6vw;
+  padding-right: 0.2vw;
   border-right: 2px solid grey;
   width: fit-content;
 }
