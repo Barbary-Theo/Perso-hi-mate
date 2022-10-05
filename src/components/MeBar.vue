@@ -3,7 +3,7 @@
   <v-container fluid class="bar">
     <v-row>
 
-      <v-avatar :class="classe" @mouseover="hover = true" rounded>
+      <v-avatar :class="classe" @mouseover="tst()" rounded>
         <img src="../assets/me.png" alt="Hi, it's me">
       </v-avatar>
 
@@ -39,7 +39,7 @@
 </template>
 
 <script>
-
+import $ from 'jquery';
 import {
   mdiLinkedin,
   mdiGitlab
@@ -54,7 +54,8 @@ export default {
       mdiLinkedin,
       mdiGitlab
     },
-    hover: false
+    hover: false,
+    window: screen
   }),
 
   methods: {
@@ -65,6 +66,10 @@ export default {
 
     openGitLab: () => {
       window.open("https://gitlab.com/Barbary-Theo", "_blank")
+    },
+
+    tst: function () {
+      this.hover = $(window).width() > 850
     }
   },
 

@@ -8,7 +8,7 @@
 
     <div id="folio-side" class="folio-side">
 
-      <div id="console-container" class="console-container translateX-animation">
+      <div v-if="showConsole" id="console-container" class="console-container translateX-animation">
         <div class="console" id="console">
           <div class="menu-console">
             <div class="menu-console-button">
@@ -65,7 +65,8 @@ export default {
     alreadyShown: false,
     intervalCommandLine: null,
     idEleToScroll: ["#console-container"],
-    textInputed: ""
+    textInputed: "",
+    showConsole: $(window).width() >= 939
   }),
 
   methods: {
@@ -123,6 +124,7 @@ export default {
             &nbsp;&nbsp;&nbsp;&nbsp;- Alexandre c'est le plus beau 🐝<br>
             &nbsp;&nbsp;&nbsp;&nbsp;- Raphael c'est le plus chaud 🐻<br>
             &nbsp;&nbsp;&nbsp;&nbsp;- Damien c'est un coquin 🦄<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Nicolas c'est mon papa 🦖<br>
             &nbsp;&nbsp;&nbsp;&nbsp;- Younes c'est le plus malin 🐵<br>
             &nbsp;&nbsp;&nbsp;&nbsp;- Roman c'est le plus sportif 🦊<br>
             &nbsp;&nbsp;&nbsp;&nbsp;- Basile c'est le plus petit 🐬<br>
@@ -182,11 +184,14 @@ export default {
       this.initScrollAnimation();
       this.initCommandLineAnimation();
       this.initKeyDownEvent();
+
+      $(window).resize(() => {this.showConsole = $(window).width() >= 939});
     }
 
   },
 
   mounted: function () {
+    console.log($(window).width())
     document.title = '🌈 Barbary';
     this.initEvent();
   },
