@@ -2,9 +2,7 @@
 
   <div class="main">
 
-    <BlueSide v-if="seeBlueSide"/>
-
-    <OrangeSide v-if="seeOrangeSide"/>
+    <HomeSide/>
 
     <div id="folio-side" class="folio-side">
 
@@ -51,17 +49,14 @@
 <script>
 
 import $ from 'jquery';
-import OrangeSide from "@/components/OrangeSide";
-import BlueSide from "@/components/BlueSide";
+import HomeSide from "@/components/HomeSide";
 import {mdiBrightness1} from "@mdi/js";
 
 export default {
   name: 'HiMate',
-  components: {BlueSide, OrangeSide},
+  components: {HomeSide},
   data: () => ({
     icon: { mdiBrightness1 },
-    seeOrangeSide: true,
-    seeBlueSide: false,
     alreadyShown: false,
     intervalCommandLine: null,
     idEleToScroll: ["#console-container"],
