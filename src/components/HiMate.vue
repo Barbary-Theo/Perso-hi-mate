@@ -40,6 +40,27 @@
         </div>
       </div>
 
+      <div id="presentation" class="presentation">
+
+      </div>
+
+      <div id="experiences" class="experiences">
+
+      </div>
+
+      <div id="skills" class="skills">
+
+      </div>
+
+      <div id="projects" class="projects">
+
+      </div>
+
+      <div id="footer" class="footer">
+
+      </div>
+
+
     </div>
 
   </div>
@@ -202,11 +223,9 @@ export default {
 
 .folio-side {
   background-color: white;
-  height: 100vh;
-}
-
-.console-container {
-
+  height: 100%;
+  margin-bottom: 0 !important;
+  position: relative;
 }
 
 .console {
@@ -292,6 +311,29 @@ export default {
 .ref-console {
   color: black !important;
   text-decoration: none;
+}
+
+.footer {
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 0 !important;
+  background-color: #0748ff1c;
+}
+
+.presentation {
+  height: 20vh;
+}
+
+.experiences {
+  height: 20vh;
+}
+
+.skills {
+  height: 20vh;
+}
+
+.projects {
+  height: 20vh;
 }
 
 </style>
