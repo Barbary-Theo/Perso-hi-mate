@@ -126,7 +126,6 @@ export default {
         else ele.addClass("command-line-end")
         cptCommandLine ++;
       }, 600)
-
     },
 
     enterFunction: function (elem) {
@@ -177,6 +176,8 @@ export default {
         let keyCode = e.originalEvent.keyCode;
         let key = e.originalEvent.key;
         let elem = $("#command-line-end");
+
+        console.log("sus de fou fréro mais bon go test quoi");
 
         if(keyCode === 32 && e.target === document.body) {
           e.preventDefault();
