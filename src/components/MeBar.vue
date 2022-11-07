@@ -1,40 +1,49 @@
 <template>
 
-  <v-container fluid class="bar">
-    <v-row>
+  <div class="bar container-fluid">
+    <div class="row">
 
-      <v-avatar :class="classe" @mouseover="tst()" rounded>
-        <img src="../assets/me.png" alt="Hi, it's me">
-      </v-avatar>
+      <div class="col-md-2 offset-md-0 col-sm-4 offset-sm-4 col-4 offset-4" style="display: flex; flex-direction: column; align-items: center">
+
+        <v-avatar :class="classe" @mouseover="tst()" rounded>
+          <img src="../assets/me.png" alt="Hi, it's me">
+        </v-avatar>
 
 
-      <transition name="fade">
-        <v-card v-if="hover" @mouseleave="hover = false" class="card-hover">
+        <transition name="fade">
+          <v-card v-if="hover" @mouseleave="hover = false" class="card-hover">
 
-          <v-avatar class="card-avatar" rounded>
-            <img src="../assets/me.png" alt="Hi, it's me">
-          </v-avatar>
+            <v-avatar class="card-avatar" rounded>
+              <img src="../assets/me.png" alt="Hi, it's me">
+            </v-avatar>
 
-          <p class="margin-2"> Hello mate ! </p>
-          <p> I'm glad you're here 🤝 </p>
-          <hr/>
-          <p style="margin-top: 2vh !important"> You can scroll down 😉 </p>
-        </v-card>
-      </transition>
+            <p class="margin-2"> Hello mate ! </p>
+            <p> I'm glad you're here 🤝 </p>
+            <hr/>
+            <p style="margin-top: 2vh !important"> You can scroll down 😉 </p>
+          </v-card>
+        </transition>
 
-      <div class="column">
-        <span class="group pa-2">
-          <v-icon @click="openLinkedin" small color="#2343FD">{{ icon.mdiLinkedin }}</v-icon>
-        </span>
+        <div style="margin-top: 1.5vh; display: flex; width: 100%; justify-content: space-around !important;">
 
-        <span class="group pa-2">
-          <v-icon @click="openGitLab" small color="#FDBE23">{{ icon.mdiGitlab }}</v-icon>
-        </span>
+           <span style="width: 20%; text-align: center">
+              <v-icon @click="openLinkedin" small color="#2343FD">{{ icon.mdiLinkedin }}</v-icon>
+            </span>
+
+            <span style="width: 20%; text-align: center">
+              <v-icon @click="openGitLab" small color="#FDBE23">{{ icon.mdiGitlab }}</v-icon>
+            </span>
+
+            <span style="width: 20%; text-align: center">
+              <v-icon @click="openGitHub" small color="black">{{ icon.mdiGithub }}</v-icon>
+            </span>
+
+        </div>
 
       </div>
 
-    </v-row>
-  </v-container>
+    </div>
+  </div>
 
 </template>
 
@@ -42,8 +51,13 @@
 import $ from 'jquery';
 import {
   mdiLinkedin,
-  mdiGitlab
+  mdiGitlab,
+  mdiGithub
 } from '@mdi/js'
+import { BootstrapVue } from 'bootstrap-vue'
+import Vue from 'vue'
+
+Vue.use(BootstrapVue)
 
 export default {
   name: "MeBar",
@@ -52,7 +66,8 @@ export default {
     classe: "avatar",
     icon: {
       mdiLinkedin,
-      mdiGitlab
+      mdiGitlab,
+      mdiGithub
     },
     hover: false,
     window: screen
@@ -68,6 +83,10 @@ export default {
       window.open("https://gitlab.com/Barbary-Theo", "_blank")
     },
 
+    openGitHub: () => {
+      window.open("https://github.com/Barbary-Theo", "_blank")
+    },
+
     tst: function () {
       this.hover = $(window).width() > 850
     }
@@ -78,19 +97,19 @@ export default {
 
 <style scoped>
 
+img {
+  width: 100%  !important;
+}
 
 .bar {
   position: fixed;
   top: 3vh;
   left: 3vh;
-}
-
-.card {
-  text-align: center;
+  z-index: 100;
 }
 
 .avatar {
-  width: 14vh !important;
+  width: 70% !important;
   height: auto !important;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }

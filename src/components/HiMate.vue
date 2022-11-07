@@ -40,23 +40,41 @@
         </div>
       </div>
 
-      <div id="presentation" class="presentation">
+      <div id="presentation" class="presentation container-fluid spacer translateX-animation-origin">
+
+        <div class="row">
+
+          <div class="col-md-5 offset-md-1 col-sm-12 col-12" style="align-items: center; text-align: center">
+            <img alt="me" v-if="smallScreen" style="width: 50vw; height: auto" src="../assets/undraw_handcrafts_woman-2.png"/>
+            <img alt="me" v-if="!smallScreen" class="img-side" src="../assets/undraw_handcrafts_woman-2.png"/>
+          </div>
+
+          <div class="col-md-5 col-sm-12 col-12" style="display: flex; align-items: center; text-align: center">
+            <p>
+            Hi everyone ! 🙂 I’m glad your are here.<br>
+            I’m a simple software engineer apprenticeship, I work in Toyota Motor Manufacturing France and a student in INSA Hauts-de-France. Let’s learn some informations about me !<br>
+            <br>
+            Liked I said I work in Toyota, basically the company’s values influence me a lot, for exemples the "Kaizen", that means the continuous improvement et the pleasure to learn so more, moreover 4S, my work’s quality and reliability !<br>
+            </p>
+          </div>
+
+        </div>
 
       </div>
 
-      <div id="experiences" class="experiences">
+      <div id="experiences" class="experiences spacer">
 
       </div>
 
-      <div id="skills" class="skills">
+      <div id="skills" class="skills spacer">
 
       </div>
 
-      <div id="projects" class="projects">
+      <div id="projects" class="projects spacer">
 
       </div>
 
-      <div id="footer" class="footer">
+      <div id="footer" class="footer spacer">
 
       </div>
 
@@ -72,17 +90,25 @@
 import $ from 'jquery';
 import HomeSide from "@/components/HomeSide";
 import {mdiBrightness1} from "@mdi/js";
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import { BootstrapVue } from 'bootstrap-vue'
+import Vue from 'vue'
+
+Vue.use(BootstrapVue)
 
 export default {
   name: 'HiMate',
   components: {HomeSide},
   data: () => ({
     icon: { mdiBrightness1 },
-    alreadyShown: false,
+    alreadyShown: [false, false],
     intervalCommandLine: null,
-    idEleToScroll: ["#console-container"],
+    idEleToScroll: ["#console-container", "#presentation"],
     textInputed: "",
-    showConsole: $(window).width() >= 939
+    showConsole: $(window).width() >= 939,
+    smallScreen: $(window).width() <= 756,
+    sus: ""
   }),
 
   methods: {
@@ -99,17 +125,21 @@ export default {
 
     initScrollAnimation: function () {
       $(window).on("scroll", () => {
-        this.idEleToScroll.forEach((elem) => {
-          if(!this.alreadyShown && this.isScrolledIntoView(elem)) {
+        this.idEleToScroll.forEach((elem, index) => {
+          try {
+            if(!this.alreadyShown[index] && this.isScrolledIntoView(elem)) {
 
-            let halfScreenLessConsoleWidth = 100 * (($(elem).width() * 0.5) / $(window).width()) * 0.5;
+              let halfScreenLessConsoleWidth = index === 0 ? 100 * (($(elem).width() * 0.5) / $(window).width()) * 0.5 : 0;
 
-            $(elem).css("margin-left", `${halfScreenLessConsoleWidth}vw`).css("opacity", 1);
-            this.alreadyShown = true;
-          }
-          else if (this.alreadyShown && !this.isScrolledIntoView(elem)) {
-            $(elem).css("margin-left", "0").css("opacity", 0);
-            this.alreadyShown = false;
+              $(elem).css("margin-left", `${halfScreenLessConsoleWidth}vw`).css("opacity", 1);
+              this.alreadyShown[index] = true;
+            }
+            else if (this.alreadyShown[index] && !this.isScrolledIntoView(elem)) {
+              $(elem).css("margin-left", (index === 0 ? "0" : "-25vw")).css("opacity", 0);
+              this.alreadyShown[index] = false;
+            }
+          } catch (error) {
+            this.sus = "";
           }
         })
       });
@@ -201,7 +231,10 @@ export default {
       this.initCommandLineAnimation();
       this.initKeyDownEvent();
 
-      $(window).resize(() => {this.showConsole = $(window).width() >= 939});
+      $(window).resize(() => {
+        this.showConsole = $(window).width() >= 939;
+        this.smallScreen = $(window).width() <= 756;
+      });
     }
 
   },
@@ -220,6 +253,10 @@ export default {
 </script>
 
 <style>
+
+.spacer {
+  margin-top: 20vh !important;
+}
 
 .folio-side {
   background-color: white;
@@ -278,6 +315,13 @@ export default {
   transition: .5s ease;
 }
 
+.translateX-animation-origin {
+  transition-property: margin-left, opacity;
+  opacity: 0;
+  margin-left: -24vw;
+  transition: .5s ease;
+}
+
 .menu-content {
   margin-top: 4vh;
   color: black;
@@ -320,10 +364,6 @@ export default {
   background-color: #0748ff1c;
 }
 
-.presentation {
-  height: 20vh;
-}
-
 .experiences {
   height: 20vh;
 }
@@ -334,6 +374,11 @@ export default {
 
 .projects {
   height: 20vh;
+}
+
+.img-side {
+  width: 20vw;
+  height: auto;
 }
 
 </style>
