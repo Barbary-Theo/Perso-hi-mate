@@ -51,9 +51,9 @@
             <img alt="cat" v-if="!smallScreen" class="img-side-cat" src="../assets/undraw_handcrafts_cat.png"/>
           </div>
 
-          <div class="col-md-5 col-sm-12 col-12" style="display: flex; align-items: center;">
+          <div class="col-md-5 col-sm-12 col-12" style="display: flex; flex-direction: column; align-items: center;">
+            <h5> Hi everyone ! I’m glad your are here. 🙂 </h5>
             <p class="text-content">
-            Hi everyone ! 🙂 I’m glad your are here.<br>
             I’m a simple software engineer apprenticeship, I work in Toyota Motor Manufacturing France and a student in INSA Hauts-de-France. Let’s learn some informations about me !<br>
             <br>
             Liked I said I work in Toyota, basically the company’s values influence me a lot, for exemples the "Kaizen", that means the continuous improvement et the pleasure to learn so more, moreover 4S, my work’s quality and reliability !<br>
@@ -76,7 +76,8 @@
             <img alt="graph" style="width: 50vw; height: auto" src="../assets/undraw_handcrafts_analytics.png"/>
           </div>
 
-          <div class="col-md-5 offset-md-1 col-sm-12 col-12" style="display: flex; align-items: center;">
+          <div class="col-md-5 offset-md-1 col-sm-12 col-12" style="display: flex; flex-direction: column; align-items: center;">
+            <h5> Experiences 🤖</h5>
             <p class="text-content">
               As a futur engineer I could learn a lot a of different skills, firstly in technically (that I will present in the next part) moreover in and mainly in the project management.
               <br>
@@ -112,6 +113,7 @@
           </div>
 
           <div class="col-md-5 col-sm-12 col-12" style="display: flex; align-items: center; flex-direction: column">
+            <h5> Skills ⚙️ </h5>
             <p class="text-content">
               Who says computer scientist must say programming langage and technical skills, let’s see some of them which I proficiency :
               <br>
@@ -148,10 +150,11 @@
       </div>
 
 
-      <div id="projects" class="projects container-fluid spacer translateX-animation-origin">
+      <div id="projects" class="projects spacer">
 
-        <div class="row">
+        <div style="display: flex; flex-direction: row">
 
+          <div class="card-project"></div>
 
         </div>
 
@@ -208,6 +211,7 @@ export default {
 
     initScrollAnimation: function () {
       $(window).on("scroll", () => {
+
         this.idEleToScroll.forEach((elem, index) => {
           try {
             if(!this.alreadyShown[index] && this.isScrolledIntoView(elem)) {
@@ -478,6 +482,13 @@ export default {
 .divider-container {
   display: flex;
   justify-content: center;
+}
+
+.card-project {
+  width: 20vw;
+  height: 20vh;
+  padding: 2vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 </style>

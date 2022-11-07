@@ -1,6 +1,6 @@
 <template>
 
-  <div class="bar container-fluid">
+  <div id="bar" class="bar container-fluid">
     <div class="row">
 
       <div class="col-md-2 offset-md-0 col-sm-4 offset-sm-4 col-4 offset-4" style="display: flex; flex-direction: column; align-items: center">
@@ -27,11 +27,11 @@
         <div style="margin-top: 1.5vh; display: flex; width: 100%; justify-content: space-around !important;">
 
            <span style="width: 20%; text-align: center">
-              <v-icon @click="openLinkedin" small color="#2343FD">{{ icon.mdiLinkedin }}</v-icon>
+              <v-icon @click="openLinkedin" small color="#384454">{{ icon.mdiLinkedin }}</v-icon>
             </span>
 
             <span style="width: 20%; text-align: center">
-              <v-icon @click="openGitLab" small color="#FDBE23">{{ icon.mdiGitlab }}</v-icon>
+              <v-icon @click="openGitLab" small color="#1E0F1C">{{ icon.mdiGitlab }}</v-icon>
             </span>
 
             <span style="width: 20%; text-align: center">
@@ -70,9 +70,25 @@ export default {
       mdiGithub
     },
     hover: false,
-    window: screen
+    window: screen,
+    avatarShown: true
   }),
 
+  mounted() {
+
+    $(window).on("scroll", () => {
+      if (this.avatarShown && $(window).scrollTop() > $(window).height()) {
+        this.avatarShown = false;
+        $("#bar").css("opacity", 0);
+      }
+      else if (!this.avatarShown && $(window).scrollTop() < $(window).height()) {
+        this.avatarShown = true;
+        $("#bar").css("opacity", 1);
+      }
+
+    });
+
+  },
   methods: {
 
     openLinkedin: () => {
@@ -88,7 +104,7 @@ export default {
     },
 
     tst: function () {
-      this.hover = $(window).width() > 850
+      this.hover = $(window).width() > 850;
     }
   },
 
@@ -106,6 +122,8 @@ img {
   top: 3vh;
   left: 3vh;
   z-index: 100;
+  opacity: 1;
+  transition: opacity .3s;
 }
 
 .avatar {
