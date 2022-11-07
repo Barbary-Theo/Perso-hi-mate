@@ -45,12 +45,14 @@
         <div class="row">
 
           <div class="col-md-5 offset-md-1 col-sm-12 col-12" style="align-items: center; text-align: center">
-            <img alt="me" v-if="smallScreen" style="width: 50vw; height: auto" src="../assets/undraw_handcrafts_woman-2.png"/>
-            <img alt="me" v-if="!smallScreen" class="img-side" src="../assets/undraw_handcrafts_woman-2.png"/>
+            <img alt="me" v-if="smallScreen" style="width: 50vw; height: auto" src="../assets/undraw_handcrafts_woman.png"/>
+            <img alt="me" v-if="smallScreen" style="width: 20vw; height: auto; position: relative;" src="../assets/undraw_handcrafts_cat.png"/>
+            <img alt="me" v-if="!smallScreen" class="img-side" src="../assets/undraw_handcrafts_woman.png"/>
+            <img alt="cat" v-if="!smallScreen" class="img-side-cat" src="../assets/undraw_handcrafts_cat.png"/>
           </div>
 
-          <div class="col-md-5 col-sm-12 col-12" style="display: flex; align-items: center; text-align: center">
-            <p>
+          <div class="col-md-5 col-sm-12 col-12" style="display: flex; align-items: center;">
+            <p class="text-content">
             Hi everyone ! 🙂 I’m glad your are here.<br>
             I’m a simple software engineer apprenticeship, I work in Toyota Motor Manufacturing France and a student in INSA Hauts-de-France. Let’s learn some informations about me !<br>
             <br>
@@ -62,15 +64,96 @@
 
       </div>
 
-      <div id="experiences" class="experiences spacer">
+      <div class="divider-container spacer">
+        <img class="divider-img" src="../assets/undraw_handcrafts_plants.png" alt="divider plants"/>
+      </div>
+
+      <div id="experiences" class="experiences container-fluid spacer translateX-animation-origin">
+
+        <div class="row">
+
+          <div v-if="smallScreen" class="col-md-5 col-sm-12 col-12" style="align-items: center; text-align: center">
+            <img alt="graph" style="width: 50vw; height: auto" src="../assets/undraw_handcrafts_analytics.png"/>
+          </div>
+
+          <div class="col-md-5 offset-md-1 col-sm-12 col-12" style="display: flex; align-items: center;">
+            <p class="text-content">
+              As a futur engineer I could learn a lot a of different skills, firstly in technically (that I will present in the next part) moreover in and mainly in the project management.
+              <br>
+              <br>
+              The company where I am and my school take care about my progress and trust in me, it allowed me to improve myself efficiency and with envy and finally to be able to lead some project from A to Z.
+              <br>
+              <br>
+              In addition, the traineeship that I realized 2 years ago during my DUT (technical university degree) also allowed me to improve my technical capacities and my decision making !
+            </p>
+          </div>
+
+          <div v-if="!smallScreen" class="col-md-5 col-sm-12 col-12" style="align-items: center; text-align: center">
+            <img alt="graph" class="img-side-experiences" src="../assets/undraw_handcrafts_analytics.png"/>
+          </div>
+
+        </div>
 
       </div>
 
-      <div id="skills" class="skills spacer">
+
+      <div class="divider-container spacer">
+        <img class="divider-img" src="../assets/undraw_handcrafts_add_village.png" alt="divider village"/>
+      </div>
+
+
+      <div id="skills" class="skills container-fluid spacer translateX-animation-origin">
+
+        <div class="row">
+
+          <div class="col-md-5 offset-md-1 col-sm-12 col-12" style="align-items: center; text-align: center">
+            <img alt="computer" v-if="smallScreen" style="width: 50vw; height: auto" src="../assets/undraw_handcrafts_computer.png"/>
+            <img alt="computer" v-if="!smallScreen" class="img-side-skills" src="../assets/undraw_handcrafts_computer.png"/>
+          </div>
+
+          <div class="col-md-5 col-sm-12 col-12" style="display: flex; align-items: center; flex-direction: column">
+            <p class="text-content">
+              Who says computer scientist must say programming langage and technical skills, let’s see some of them which I proficiency :
+              <br>
+              <br>
+            </p>
+
+            <div style="display: flex; flex-direction: row; justify-content: space-around !important;">
+
+              <ul style="width: 40%;">
+                <li>Java</li>
+                <li>Vue.js / react.js / JS / jQuery</li>
+                <li>Python</li>
+                <li>SpringBoot</li>
+                <li>SQL / SQL Server / PostgreSQL / MySQL / Hibernate</li>
+              </ul>
+              <ul style="width: 40%">
+                <li>Flask</li>
+                <li>Flutter / Dart</li>
+                <li>Git</li>
+                <li>NodeJs / Express</li>
+                <li>And so much more 😉</li>
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
 
       </div>
 
-      <div id="projects" class="projects spacer">
+
+      <div class="divider-container spacer">
+        <img class="divider-img" src="../assets/undraw_handcrafts_nature.png" alt="divider nature"/>
+      </div>
+
+
+      <div id="projects" class="projects container-fluid spacer translateX-animation-origin">
+
+        <div class="row">
+
+
+        </div>
 
       </div>
 
@@ -102,9 +185,9 @@ export default {
   components: {HomeSide},
   data: () => ({
     icon: { mdiBrightness1 },
-    alreadyShown: [false, false],
+    alreadyShown: [false, false, false, false, false],
     intervalCommandLine: null,
-    idEleToScroll: ["#console-container", "#presentation"],
+    idEleToScroll: ["#console-container", "#presentation", "#experiences", "#skills", "#projects"],
     textInputed: "",
     showConsole: $(window).width() >= 939,
     smallScreen: $(window).width() <= 756,
@@ -255,7 +338,7 @@ export default {
 <style>
 
 .spacer {
-  margin-top: 20vh !important;
+  margin-top: 15vh !important;
 }
 
 .folio-side {
@@ -348,10 +431,6 @@ export default {
   width: fit-content;
 }
 
-.container-row {
-  margin-top: 15vh;
-}
-
 .ref-console {
   color: black !important;
   text-decoration: none;
@@ -364,21 +443,41 @@ export default {
   background-color: #0748ff1c;
 }
 
-.experiences {
-  height: 20vh;
-}
-
-.skills {
-  height: 20vh;
-}
-
-.projects {
-  height: 20vh;
-}
-
 .img-side {
-  width: 20vw;
+  height: 50vh;
+  width: auto;
+}
+
+.img-side-cat {
+  position: relative;
+  height: 20vh;
+  width: auto;
+}
+
+.img-side-experiences {
+  height: 40vh;
+  width: auto;
+}
+
+.img-side-skills {
+  width: 30vw;
   height: auto;
+}
+
+.text-content {
+  font-size: 2.3vh;
+  font-family: Helvetica, sans-serif;
+  padding: 2vh;
+}
+
+.divider-img {
+  height: 15vh;
+  width: auto;
+}
+
+.divider-container {
+  display: flex;
+  justify-content: center;
 }
 
 </style>
