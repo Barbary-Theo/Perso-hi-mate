@@ -9,17 +9,12 @@
 
     <p class="hi"> Hello friend ! </p>
 
-    <v-img
-        :class="classeHello"
-        src="../assets/hello-friend.png"
-    ></v-img>
-
-    <v-img
-        :class="classeHow"
-        src="../assets/how-are-you.png"
-    ></v-img>
-
     <v-icon color="white" id="to-scroll" large :class="classeIcon">{{ icon.mdiChevronDown }}</v-icon>
+
+    <svg id="test" class="spacer-50" width="615" height="33" viewBox="0 0 615 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 17.9557C112.621 -1.37643 136 1.49999 173.5 18C198 29.5 224.743 37.3747 273.987 28.7991C336 18 366.867 1.71303 411 5.00001C452.5 8.09087 456.983 10.6351 500 19C534.914 25.7891 583.5 5.95697 614 1" stroke="white"/>
+    </svg>
+
 
   </div>
 
@@ -137,7 +132,6 @@ export default {
   mounted: function () {
     this.initParams();
     this.initEvent();
-    this.showAndHideSentence();
     this.doAnimationScrollDown();
   },
 
@@ -213,6 +207,48 @@ export default {
 .translate-animationY-bottom {
   transition: transform 0.5s ease;
   transform: translateY(0.6vh);
+}
+
+.sus {
+  position: absolute;
+}
+
+#test {
+  position: absolute;
+  height: 1000vh;
+  width: 100vw;
+  stroke-dasharray: 624;
+  z-index: 0;
+}
+
+.fillSvg {
+  animation: 3s fillSvg linear;
+}
+
+.fillSvgBis {
+  animation: 3s fillSvgBis linear;
+}
+
+@keyframes fillSvg {
+  0% {
+    stroke-dashoffset: 624;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillSvgBis {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 624;
+  }
+}
+
+.spacer-50 {
+  margin-top: 50vh !important;
 }
 
 </style>
