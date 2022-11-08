@@ -436,19 +436,21 @@ export default {
     initScrollAnimation: function () {
       $(window).on("scroll", () => {
 
-        if(this.isScrolledIntoView("#projects")) {
-          let items = document.getElementsByClassName("card-project");
+        if(!this.extraSmallScreen) {
+          if(this.isScrolledIntoView("#projects")) {
+            let items = document.getElementsByClassName("card-project");
 
-          for( let i = 0 ; i < items.length ; i ++) {
-            items.item(i).classList.remove("zoom-out-zoom-in-anim");
-            items.item(i).classList.add("zoom-in-zoom-out-anim");
+            for( let i = 0 ; i < items.length ; i ++) {
+              items.item(i).classList.remove("zoom-out-zoom-in-anim");
+              items.item(i).classList.add("zoom-in-zoom-out-anim");
+            }
           }
-        }
-        else {
-          let items = document.getElementsByClassName("card-project");
+          else {
+            let items = document.getElementsByClassName("card-project");
 
-          for( let i = 0 ; i < items.length ; i ++) {
-            items.item(i).classList.replace("zoom-in-zoom-out-anim", "zoom-out-zoom-in-anim");
+            for( let i = 0 ; i < items.length ; i ++) {
+              items.item(i).classList.replace("zoom-in-zoom-out-anim", "zoom-out-zoom-in-anim");
+            }
           }
         }
 
@@ -729,17 +731,6 @@ export default {
   justify-content: center;
 }
 
-.card-project {
-  margin: 2vh;
-  height: 35vh !important;
-  overflow-y: scroll;
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
-  z-index: 1;
-  transform: scale(0, 0);
-}
-
 .spacer-2 {
   margin-top: 1vh;
 }
@@ -799,32 +790,63 @@ export default {
 }
 
 
-.zoom-in-zoom-out-anim  {
-  animation: zoom-in-zoom-out .2s ease-out;
-  transform: scale(1, 1);
-}
+@media only screen and (max-width: 600px) {
 
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(0, 0);
-  }
-  100% {
+  .card-project {
+    margin: 2vh;
+    height: 35vh !important;
+    overflow-y: scroll;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+    z-index: 1;
     transform: scale(1, 1);
   }
+
 }
 
-.zoom-out-zoom-in-anim  {
-  animation: zoom-out-zoom-in .2s ease-out;
-  transform: scale(0, 0);
-}
 
-@keyframes zoom-out-zoom-in {
-  0% {
-    transform: scale(1, 1);
-  }
-  100% {
+@media only screen and (min-width: 600px) {
+
+  .card-project {
+    margin: 2vh;
+    height: 35vh !important;
+    overflow-y: scroll;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+    z-index: 1;
     transform: scale(0, 0);
   }
+
+  .zoom-in-zoom-out-anim  {
+    animation: zoom-in-zoom-out .2s ease-out;
+    transform: scale(1, 1);
+  }
+
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(0, 0);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+  .zoom-out-zoom-in-anim  {
+    animation: zoom-out-zoom-in .2s ease-out;
+    transform: scale(0, 0);
+  }
+
+  @keyframes zoom-out-zoom-in {
+    0% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(0, 0);
+    }
+  }
+
 }
 
 </style>
