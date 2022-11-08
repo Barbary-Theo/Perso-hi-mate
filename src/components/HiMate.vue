@@ -436,6 +436,14 @@ export default {
     initScrollAnimation: function () {
       $(window).on("scroll", () => {
 
+        if(this.isScrolledIntoView("#projects")) {
+          let items = document.getElementsByClassName("card-project");
+
+          for( let i = 0 ; i < items.length ; i ++) {
+            items.item(i).classList.add("card-project-show");
+          }
+        }
+
         this.idEleToScroll.forEach((elem, index) => {
           try {
             if(!this.alreadyShown[index] && this.isScrolledIntoView(elem)) {
@@ -721,6 +729,8 @@ export default {
   padding-left: 0 !important;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
   z-index: 1;
+  opacity: 0;
+  transition: opacity .5s;
 }
 
 .spacer-2 {
@@ -779,6 +789,10 @@ export default {
 #planet-svg {
   width: 50vw;
   height: auto;
+}
+
+.card-project-show {
+  opacity: 1;
 }
 
 </style>
