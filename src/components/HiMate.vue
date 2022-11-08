@@ -152,11 +152,116 @@
 
       <div id="projects" class="projects spacer">
 
-        <div style="display: flex; flex-direction: row">
+        <h5 style="text-align: center"> Some projects 🔭️ </h5>
 
-          <div class="card-project"></div>
+        <div class="container-fluid" style="margin-top: 5vh;">
+          <div class="row" style="display: flex; flex-direction: row; justify-content: space-around;">
 
+            <v-card color="white" class="card-project width-20">
+              <div style="height: 40%; width: 100%; background-color: #BCD7B7; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+                <v-card-title>Web Dofus Quest</v-card-title>
+              </div>
+
+              <v-card-text>
+
+                <div class="col-12">A project implementing an API with SpringBoot and a front in React.js</div>
+                <v-chip-group column class="spacer-2">
+                  <v-chip outlined label color="purple"> React </v-chip>
+                  <v-chip outlined label color="green"> SpringBoot </v-chip>
+                  <v-chip outlined label color="red"> Java </v-chip>
+                  <v-chip outlined label color="blue"> Sql </v-chip>
+                </v-chip-group>
+                <div class="spacer-2" style="display: flex; justify-content: center; flex-direction: row;">
+                   <v-btn color="grey" @click="openSpring" style="color: white;"> Go to the git <v-icon right dark>{{icon.mdiGithub}}</v-icon> </v-btn>
+                </div>
+              </v-card-text>
+
+            </v-card>
+
+            <v-card color="white" class="card-project width-20">
+              <div style="height: 40%; width: 100%; background-color: #A6CFDF; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+                <v-card-title>Project "Gone"</v-card-title>
+              </div>
+
+              <v-card-text>
+
+                <div class="col-12">A Trello like mobile project using flutter and firebase</div>
+                <v-chip-group column class="spacer-2">
+                  <v-chip outlined label color="indigo"> Flutter </v-chip>
+                  <v-chip outlined label color="indigo darken-3"> Dart </v-chip>
+                  <v-chip outlined label color="red"> Firebase </v-chip>
+                </v-chip-group>
+                <div class="spacer-2" style="display: flex; justify-content: center; flex-direction: row;">
+                  <v-btn color="grey" @click="openGone" style="color: white;"> Go to the git <v-icon right dark>{{icon.mdiGithub}}</v-icon> </v-btn>
+                </div>
+              </v-card-text>
+
+            </v-card>
+
+            <v-card color="white" class="card-project width-20">
+              <div style="height: 40%; width: 100%; background-color: #DFB0A6; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+                <v-card-title> AI for Othello</v-card-title>
+              </div>
+
+              <v-card-text>
+
+                <div class="col-12">An artificial intelligence configurable which can beat you on Othello using python</div>
+                <v-chip-group column class="spacer-2">
+                  <v-chip outlined label color="green"> Python </v-chip>
+                  <v-chip outlined label color="blue"> Mathematics </v-chip>
+                  <v-chip outlined label color="dark"> Complexity </v-chip>
+                </v-chip-group>
+                <div class="spacer-2" style="display: flex; justify-content: center; flex-direction: row;">
+                  <v-btn color="grey" @click="opneOthello" style="color: white;"> Go to the git <v-icon right dark>{{icon.mdiGithub}}</v-icon> </v-btn>
+                </div>
+              </v-card-text>
+
+            </v-card>
+
+            <v-card color="white" class="card-project width-20">
+              <div style="height: 40%; width: 100%; background-color: #A6DFD0; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+                <v-card-title> System and secured prog</v-card-title>
+              </div>
+
+              <v-card-text>
+
+                <div class="col-12">Simulate server communication using sockets and watchdogs to secure communication</div>
+                <v-chip-group column class="spacer-2">
+                  <v-chip outlined label color="green"> Python </v-chip>
+                  <v-chip outlined label color="green darken-4"> Linux </v-chip>
+                  <v-chip outlined label color="purple"> Security </v-chip>
+                </v-chip-group>
+                <div class="spacer-2" style="display: flex; justify-content: center; flex-direction: row;">
+                  <v-btn color="grey" @click="openOsps" style="color: white;"> Go to the git <v-icon right dark>{{icon.mdiGithub}}</v-icon> </v-btn>
+                </div>
+              </v-card-text>
+
+            </v-card>
+
+            <v-card color="white" class="card-project width-20">
+              <div style="height: 40%; width: 100%; background-color: #A6DFD0; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+                <v-card-title> PorteFolio</v-card-title>
+              </div>
+
+              <v-card-text>
+
+                <div class="col-12">Basically, the page where you are getting some fun 😉</div>
+                <v-chip-group column class="spacer-2">
+                  <v-chip outlined label color="blue"> Vue.js </v-chip>
+                  <v-chip outlined label color="orange lighter-2"> Responsive </v-chip>
+                  <v-chip outlined label color="black"> User interface </v-chip>
+                </v-chip-group>
+                <div class="spacer-2" style="display: flex; justify-content: center; flex-direction: row;">
+                  <v-btn color="grey" @click="openPorteFolio" style="color: white;"> Go to the git <v-icon right dark>{{icon.mdiGithub}}</v-icon> </v-btn>
+                </div>
+              </v-card-text>
+
+            </v-card>
+
+
+          </div>
         </div>
+
 
       </div>
 
@@ -175,7 +280,7 @@
 
 import $ from 'jquery';
 import HomeSide from "@/components/HomeSide";
-import {mdiBrightness1} from "@mdi/js";
+import {mdiBrightness1, mdiGithub} from "@mdi/js";
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { BootstrapVue } from 'bootstrap-vue'
@@ -187,17 +292,49 @@ export default {
   name: 'HiMate',
   components: {HomeSide},
   data: () => ({
-    icon: { mdiBrightness1 },
+    icon: { mdiBrightness1, mdiGithub },
     alreadyShown: [false, false, false, false, false],
     intervalCommandLine: null,
     idEleToScroll: ["#console-container", "#presentation", "#experiences", "#skills", "#projects"],
     textInputed: "",
-    showConsole: $(window).width() >= 939,
-    smallScreen: $(window).width() <= 756,
+    showConsole: $(window).width() >= 930,
+    smallScreen: $(window).width() <= 930,
     sus: ""
   }),
 
   methods: {
+
+    openSpring: () => {
+      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+    },
+
+    openGone: () => {
+      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+    },
+
+    opneOthello: () => {
+      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+    },
+
+    openOsps: () => {
+      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+    },
+
+    openPorteFolio: () => {
+      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+    },
+
+    openAutomates: () => {
+      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+    },
+
+    openCartographers: () => {
+      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+    },
+
+    openLex: () => {
+      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+    },
 
     isScrolledIntoView: (elem) => {
       let docViewTop = $(window).scrollTop();
@@ -319,8 +456,23 @@ export default {
       this.initKeyDownEvent();
 
       $(window).resize(() => {
-        this.showConsole = $(window).width() >= 939;
-        this.smallScreen = $(window).width() <= 756;
+        this.showConsole = $(window).width() >= 930;
+        this.smallScreen = $(window).width() <= 930;
+
+        if(this.smallScreen) {
+          let items = document.getElementsByClassName('width-20');
+
+          for (let i = 0; i < items.length ; i ++) {
+            items.item(i).classList.replace("width-20", "width-40")
+          }
+        }
+        else {
+          let items = document.getElementsByClassName('width-40');
+
+          for (let i = 0; i < items.length ; i ++) {
+            items.item(i).classList.replace("width-40", "width-20")
+          }
+        }
       });
     }
 
@@ -485,10 +637,23 @@ export default {
 }
 
 .card-project {
-  width: 20vw;
-  height: 20vh;
-  padding: 2vw;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 2vh;
+  height: fit-content;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+}
+
+.width-20 {
+  width: 20% !important;
+}
+
+.width-40 {
+  width: 40% !important;
+}
+
+.spacer-2 {
+  margin-top: 1vh;
 }
 
 </style>
