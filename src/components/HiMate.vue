@@ -349,6 +349,26 @@
 
       <div id="footer" class="footer spacer">
 
+        <div id="footer-container" style="display: flex; justify-content: space-around; flex-direction: row;">
+
+          <div style="width: 40%">
+              <ul>
+                <li>Phone : (+33) 06.24.19.10.35 (<span style="color: red"><strong> ONLY FOR BOYS </strong></span>)</li>
+                <li>Personal mail : theo.barbary25@gmail.com</li>
+                <li>Professional mail : theo.barbary@toyotafr.com</li>
+              </ul>
+          </div>
+
+          <div style="width: 40%">
+            <ul>
+              <li>LinkedIn : <a href="https://www.linkedin.com/in/th%C3%A9o-barbary-047656201/" target="_blank"> Click on me ! </a></li>
+              <li>GitLab : <a href="https://gitlab.com/Barbary-Theo" target="_blank"> Come take a look to my git </a></li>
+              <li>GitHub : <a href="https://github.com/Barbary-Theo" target="_blank"> Let's see my engineer profil </a></li>
+            </ul>
+          </div>
+
+        </div>
+
       </div>
 
 
@@ -846,6 +866,15 @@ export default {
       transform: scale(0, 0);
     }
   }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-container {
+  align-items: center;
+}
 
 }
 
