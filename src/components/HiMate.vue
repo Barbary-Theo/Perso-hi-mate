@@ -440,7 +440,15 @@ export default {
           let items = document.getElementsByClassName("card-project");
 
           for( let i = 0 ; i < items.length ; i ++) {
-            items.item(i).classList.add("card-project-show");
+            items.item(i).classList.remove("zoom-out-zoom-in-anim");
+            items.item(i).classList.add("zoom-in-zoom-out-anim");
+          }
+        }
+        else {
+          let items = document.getElementsByClassName("card-project");
+
+          for( let i = 0 ; i < items.length ; i ++) {
+            items.item(i).classList.replace("zoom-in-zoom-out-anim", "zoom-out-zoom-in-anim");
           }
         }
 
@@ -729,8 +737,7 @@ export default {
   padding-left: 0 !important;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
   z-index: 1;
-  opacity: 0;
-  transition: opacity .5s;
+  transform: scale(0, 0);
 }
 
 .spacer-2 {
@@ -791,8 +798,33 @@ export default {
   height: auto;
 }
 
-.card-project-show {
-  opacity: 1;
+
+.zoom-in-zoom-out-anim  {
+  animation: zoom-in-zoom-out .2s ease-out;
+  transform: scale(1, 1);
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.zoom-out-zoom-in-anim  {
+  animation: zoom-out-zoom-in .2s ease-out;
+  transform: scale(0, 0);
+}
+
+@keyframes zoom-out-zoom-in {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0, 0);
+  }
 }
 
 </style>
