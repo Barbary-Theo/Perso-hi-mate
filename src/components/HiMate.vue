@@ -591,4 +591,8 @@ a {
   text-align: left;
 }
 
+.v-rating .v-icon {
+  padding: 0.4vw !important;
+}
+
 </style>
