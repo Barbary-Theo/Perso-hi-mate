@@ -44,14 +44,14 @@
 
         <div class="row">
 
-          <div class="col-md-5 offset-md-1 col-sm-12 col-12" style="align-items: center; text-align: center">
+          <div class="img-side-container">
             <img alt="me" v-if="smallScreen" style="width: 50vw; height: auto" src="../assets/undraw_handcrafts_woman.png"/>
             <img alt="me" v-if="smallScreen" style="width: 20vw; height: auto; position: relative;" src="../assets/undraw_handcrafts_cat.png"/>
             <img alt="me" v-if="!smallScreen" class="img-side" src="../assets/undraw_handcrafts_woman.png"/>
             <img alt="cat" v-if="!smallScreen" class="img-side-cat" src="../assets/undraw_handcrafts_cat.png"/>
           </div>
 
-          <div class="col-md-5 col-sm-12 col-12" style="display: flex; flex-direction: column; align-items: center;">
+          <div class="text-side-container">
             <h5> Hi everyone ! I’m glad your are here. 🙂 </h5>
             <p class="text-content">
             I’m a simple software engineer apprenticeship, I work in Toyota Motor Manufacturing France and a student in INSA Hauts-de-France. Let’s learn some informations about me !<br>
@@ -72,11 +72,11 @@
 
         <div class="row">
 
-          <div v-if="smallScreen" class="col-md-5 col-sm-12 col-12" style="align-items: center; text-align: center">
-            <img alt="graph" style="width: 50vw; height: auto" src="../assets/undraw_handcrafts_analytics.png"/>
+          <div v-if="smallScreen" class="img-side-container">
+            <img alt="graph" style="width: 70vw; height: auto" src="../assets/undraw_handcrafts_analytics.png"/>
           </div>
 
-          <div class="col-md-5 offset-md-1 col-sm-12 col-12" style="display: flex; flex-direction: column; align-items: center;">
+          <div class="text-side-container">
             <h5> Experiences 🤖</h5>
             <p class="text-content">
               As a futur engineer I could learn a lot a of different skills, firstly in technically (that I will present in the next part) moreover in and mainly in the project management.
@@ -89,7 +89,7 @@
             </p>
           </div>
 
-          <div v-if="!smallScreen" class="col-md-5 col-sm-12 col-12" style="align-items: center; text-align: center">
+          <div v-if="!smallScreen" class="img-side-container">
             <img alt="graph" class="img-side-experiences" src="../assets/undraw_handcrafts_analytics.png"/>
           </div>
 
@@ -107,12 +107,12 @@
 
         <div class="row">
 
-          <div class="col-md-5 offset-md-1 col-sm-12 col-12" style="align-items: center; text-align: center">
-            <img alt="computer" v-if="smallScreen" style="width: 50vw; height: auto" src="../assets/undraw_handcrafts_computer.png"/>
+          <div class="img-side-container">
+            <img alt="computer" v-if="smallScreen" style="width: 70vw; height: auto" src="../assets/undraw_handcrafts_computer.png"/>
             <img alt="computer" v-if="!smallScreen" class="img-side-skills" src="../assets/undraw_handcrafts_computer.png"/>
           </div>
 
-          <div class="col-md-5 col-sm-12 col-12" style="display: flex; align-items: center; flex-direction: column">
+          <div class="text-side-container">
             <h5> Skills ⚙️ </h5>
             <p class="text-content">
               Who says computer scientist must say programming langage and technical skills, let’s see some of them which I proficiency :
@@ -120,22 +120,52 @@
               <br>
             </p>
 
-            <div style="display: flex; flex-direction: row; justify-content: space-around !important;">
+            <div class="rating-container">
 
-              <ul style="width: 40%;">
-                <li>Java</li>
-                <li>Vue.js / react.js / JS / jQuery</li>
-                <li>Python</li>
-                <li>SpringBoot</li>
-                <li>SQL / SQL Server / PostgreSQL / MySQL / Hibernate</li>
-              </ul>
-              <ul style="width: 40%">
-                <li>Flask</li>
-                <li>Flutter / Dart</li>
-                <li>Git</li>
-                <li>NodeJs / Express</li>
-                <li>And so much more 😉</li>
-              </ul>
+              <div class="skill-container">
+                <p class="col-8 li-rating">Java</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                <p class="col-8 li-rating">Vue.js and React.js</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                <p class="col-8 li-rating">jQuery and Js</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                <p class="col-8 li-rating">Python</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                <p class="col-8 li-rating">SpringBoot</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                <p class="col-8 li-rating">SQL and Hibernate</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                <p class="col-8 li-rating">Flask</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                <p class="col-8 li-rating">Flutter and Dart</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                <p class="col-8 li-rating">NodeJs and Express</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                <p class="col-8 li-rating">Git</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                <p class="col-8 li-rating">And so much more 😉</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+              </div>
 
             </div>
           </div>
@@ -363,7 +393,7 @@
 
             </div>
 
-            <div class="col-12 col-md-4 offset-md-4" style="display: flex; justify-content: space-around; margin-bottom: 3vh !important;">
+            <div class="col-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" style="display: flex; justify-content: space-around; margin-bottom: 3vh !important;">
               <v-btn @click="openGitHub" elevation="3" fab><v-icon large color="blue-grey darken-4">{{icon.mdiGithub}}</v-icon> </v-btn>
               <v-btn @click="openGitLab" elevation="3" fab><v-icon large color="teal">{{icon.mdiGitlab}}</v-icon> </v-btn>
               <v-btn @click="openLinkedIn" elevation="3" fab><v-icon large color="blue darken-4">{{icon.mdiLinkedin}}</v-icon> </v-btn>
@@ -748,6 +778,8 @@ export default {
   font-size: 2.3vh;
   font-family: Helvetica, sans-serif;
   padding: 2vh;
+  text-align: justify;
+  z-index: 1;
 }
 
 .divider-img {
@@ -835,7 +867,15 @@ export default {
 }
 
 
+.rating-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around !important;
+}
+
+
 @media only screen and (min-width: 600px) {
+
 
   .card-project {
     margin: 2vh;
@@ -875,6 +915,7 @@ export default {
       transform: scale(0, 0);
     }
   }
+}
 
 a {
   text-decoration: none;
@@ -888,6 +929,61 @@ a {
   margin-bottom: 0 !important;
 }
 
+@media only screen and (min-width: 910px) {
+
+  .img-side-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+  }
+
+  .text-side-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+  }
+
+}
+
+@media only screen and (max-width: 910px) {
+
+  .img-side-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .text-side-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.row {
+  justify-content: space-around !important;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skill-container > p {
+  margin-bottom: 0;
+  text-align: left;
 }
 
 </style>
