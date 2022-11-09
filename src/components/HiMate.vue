@@ -163,7 +163,7 @@
                 <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="5" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
-                <p class="col-8 li-rating">And so much more 😉</p>
+                <p class="col-12 li-rating" style="text-align: left !important;">And so much more 😉</p>
               </div>
 
             </div>
@@ -507,12 +507,26 @@ export default {
 }
 
 
-.rating-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around !important;
+@media only screen and (min-width: 800px) {
+
+  .rating-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around !important;
+  }
+
 }
 
+@media only screen and (max-width: 800px) {
+
+  .rating-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around !important;
+    font-size: 2.2vh;
+  }
+
+}
 
 a {
   text-decoration: none;

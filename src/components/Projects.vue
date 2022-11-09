@@ -12,7 +12,7 @@
       <div class="row" style="display: flex; flex-direction: row; justify-content: space-around;">
 
         <v-card color="white" class="card-project width">
-          <div style="height: 20%; width: 100%; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+          <div class="card-title">
             <v-card-title>Web Dofus Quest</v-card-title>
           </div>
 
@@ -33,7 +33,7 @@
         </v-card>
 
         <v-card color="white" class="card-project width">
-          <div style="height: 20%; width: 100%; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+          <div class="card-title">
             <v-card-title>Project "Gone"</v-card-title>
           </div>
 
@@ -53,7 +53,7 @@
         </v-card>
 
         <v-card color="white" class="card-project width">
-          <div style="height: 20%; width: 100%; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+          <div class="card-title">
             <v-card-title> AI for Othello</v-card-title>
           </div>
 
@@ -73,7 +73,7 @@
         </v-card>
 
         <v-card color="white" class="card-project width">
-          <div style="height: 20%; width: 100%; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+          <div class="card-title">
             <v-card-title> System and secured prog</v-card-title>
           </div>
 
@@ -93,7 +93,7 @@
         </v-card>
 
         <v-card color="white" class="card-project width">
-          <div style="height: 20%; width: 100%; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+          <div class="card-title">
             <v-card-title> PorteFolio</v-card-title>
           </div>
 
@@ -113,7 +113,7 @@
         </v-card>
 
         <v-card color="white" class="card-project width">
-          <div style="height: 20%; width: 100%; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+          <div class="card-title">
             <v-card-title> GPS simulation </v-card-title>
           </div>
 
@@ -133,7 +133,7 @@
 
 
         <v-card color="white" class="card-project width">
-          <div style="height: 20%; width: 100%; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+          <div class="card-title">
             <v-card-title> Cartographers game </v-card-title>
           </div>
 
@@ -152,7 +152,7 @@
         </v-card>
 
         <v-card color="white" class="card-project width">
-          <div style="height: 20%; width: 100%; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+          <div class="card-title">
             <v-card-title> Pseudo compiler </v-card-title>
           </div>
 
@@ -173,7 +173,7 @@
 
 
         <v-card color="white" class="card-project width">
-          <div style="height: 20%; width: 100%; display: flex; text-align: center; justify-content: center; border-bottom: 1px solid lightgrey">
+          <div class="card-title">
             <v-card-title> 3D modelization </v-card-title>
           </div>
 
@@ -396,7 +396,7 @@ export default {
 }
 
 .btn-github {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   bottom: 1vh;
@@ -433,6 +433,16 @@ export default {
 
 .spacer {
   margin-top: 15vh !important;
+}
+
+.card-title {
+  min-height: 10vh;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border-bottom: 1px solid lightgrey
 }
 
 </style>

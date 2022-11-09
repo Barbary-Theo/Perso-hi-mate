@@ -120,7 +120,6 @@ img {
 .bar {
   position: fixed;
   top: 3vh;
-  left: 3vh;
   z-index: 100;
   opacity: 1;
   transition: opacity .3s;
