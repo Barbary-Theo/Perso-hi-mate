@@ -42,7 +42,7 @@
 
       <div id="presentation" class="presentation container-fluid spacer translateX-animation-origin">
 
-        <div class="row">
+        <div class="row row-side">
 
           <div class="img-side-container">
             <img alt="me" v-if="smallScreen" style="width: 50vw; height: auto" src="../assets/undraw_handcrafts_woman.png"/>
@@ -70,7 +70,7 @@
 
       <div id="experiences" class="experiences container-fluid spacer translateX-animation-origin">
 
-        <div class="row">
+        <div class="row row-side">
 
           <div v-if="smallScreen" class="img-side-container">
             <img alt="graph" style="width: 70vw; height: auto" src="../assets/undraw_handcrafts_analytics.png"/>
@@ -105,7 +105,7 @@
 
       <div id="skills" class="skills container-fluid spacer translateX-animation-origin">
 
-        <div class="row">
+        <div class="row row-side">
 
           <div class="img-side-container">
             <img alt="computer" v-if="smallScreen" style="width: 70vw; height: auto" src="../assets/undraw_handcrafts_computer.png"/>
@@ -970,7 +970,7 @@ a {
   }
 }
 
-.row {
+.row-side {
   justify-content: space-around !important;
 }
 

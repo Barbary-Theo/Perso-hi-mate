@@ -3,7 +3,7 @@
   <div id="bar" class="bar container-fluid">
     <div class="row">
 
-      <div class="col-md-2 offset-md-0 col-sm-4 offset-sm-4 col-4 offset-4" style="display: flex; flex-direction: column; align-items: center">
+      <div class="col-4 offset-4 col-sm-4 offset-sm-4 col-md-2 offset-md-0 col-lg-2 offset-lg-0 col-xl-2 offset-xl-0 col-xxl-2 offset-xxl-0" style="display: flex; flex-direction: column; align-items: center">
 
         <v-avatar :class="classe" @mouseover="tst()" rounded>
           <img src="../assets/me.png" alt="Hi, it's me">
