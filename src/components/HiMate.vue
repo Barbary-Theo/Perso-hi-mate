@@ -347,24 +347,28 @@
 
       </div>
 
-      <div id="footer" class="footer spacer">
+      <div id="footer" class="footer spacer bg-light">
 
-        <div id="footer-container" style="display: flex; justify-content: space-around; flex-direction: row;">
+        <div class="container-fluid">
 
-          <div style="width: 40%">
-              <ul>
-                <li>Phone : (+33) 06.24.19.10.35 (<span style="color: red"><strong> ONLY FOR BOYS </strong></span>)</li>
-                <li>Personal mail : theo.barbary25@gmail.com</li>
-                <li>Professional mail : theo.barbary@toyotafr.com</li>
-              </ul>
-          </div>
+          <div class="row">
 
-          <div style="width: 40%">
-            <ul>
-              <li>LinkedIn : <a href="https://www.linkedin.com/in/th%C3%A9o-barbary-047656201/" target="_blank"> Click on me ! </a></li>
-              <li>GitLab : <a href="https://gitlab.com/Barbary-Theo" target="_blank"> Come take a look to my git </a></li>
-              <li>GitHub : <a href="https://github.com/Barbary-Theo" target="_blank"> Let's see my engineer profil </a></li>
-            </ul>
+            <div class="col-12" style="display:flex; justify-content: center !important;">
+
+              <div style="display: flex; flex-direction: column; justify-content: space-around; margin-top: 3vh !important;">
+                <p><v-icon>{{icon.mdiPhoneClassic}}</v-icon> (+33) 06.24.19.10.35 </p>
+                <p><v-icon>{{icon.mdiEmail}}</v-icon> theo.barbary25@gmail.com </p>
+                <p><v-icon>{{icon.mdiCardAccountMail}}</v-icon> theo.barbary@toyotafr.com </p>
+              </div>
+
+            </div>
+
+            <div class="col-12 col-md-4 offset-md-4" style="display: flex; justify-content: space-around; margin-bottom: 3vh !important;">
+              <v-btn @click="openGitHub" elevation="3" fab><v-icon large color="blue-grey darken-4">{{icon.mdiGithub}}</v-icon> </v-btn>
+              <v-btn @click="openGitLab" elevation="3" fab><v-icon large color="teal">{{icon.mdiGitlab}}</v-icon> </v-btn>
+              <v-btn @click="openLinkedIn" elevation="3" fab><v-icon large color="blue darken-4">{{icon.mdiLinkedin}}</v-icon> </v-btn>
+            </div>
+
           </div>
 
         </div>
@@ -382,7 +386,7 @@
 
 import $ from 'jquery';
 import HomeSide from "@/components/HomeSide";
-import {mdiBrightness1, mdiGithub} from "@mdi/js";
+import {mdiBrightness1, mdiGithub, mdiGitlab, mdiLinkedin, mdiPhoneClassic, mdiEmail, mdiCardAccountMail} from "@mdi/js";
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { BootstrapVue } from 'bootstrap-vue'
@@ -394,7 +398,7 @@ export default {
   name: 'HiMate',
   components: {HomeSide},
   data: () => ({
-    icon: { mdiBrightness1, mdiGithub },
+    icon: { mdiBrightness1, mdiGithub, mdiGitlab, mdiLinkedin, mdiPhoneClassic, mdiEmail, mdiCardAccountMail},
     alreadyShown: [false, false, false, false],
     intervalCommandLine: null,
     idEleToScroll: ["#console-container", "#presentation", "#experiences", "#skills"],
@@ -441,6 +445,18 @@ export default {
 
     open3D: () => {
       window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+    },
+
+    openGitHub: () => {
+      window.open("https://github.com/Barbary-Theo", "_blank")
+    },
+
+    openGitLab: () => {
+      window.open("https://gitlab.com/Barbary-Theo", "_blank")
+    },
+
+    openLinkedIn: () => {
+      window.open("https://www.linkedin.com/in/th%C3%A9o-barbary-047656201/", "_blank")
     },
 
     isScrolledIntoView: (elem) => {
@@ -707,13 +723,6 @@ export default {
   text-decoration: none;
 }
 
-.footer {
-  width: 100%;
-  height: 20vh;
-  margin-bottom: 0 !important;
-  background-color: #0748ff1c;
-}
-
 .img-side {
   height: 50vh;
   width: auto;
@@ -872,8 +881,11 @@ a {
   color: black;
 }
 
-.footer-container {
-  align-items: center;
+
+.footer {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 0 !important;
 }
 
 }

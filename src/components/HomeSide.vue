@@ -114,7 +114,7 @@ export default {
 
     eventSvg: function () {
       $("#svg-item").hide();
-      this.intervalSvg = setInterval(() => { this.treatementSvg(); }, 6000);
+      this.intervalSvg = setInterval(() => { this.treatementSvg(); }, 4000);
     }
 
   },
