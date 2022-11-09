@@ -77,7 +77,7 @@
           </div>
 
           <div class="text-side-container">
-            <h5> Experiences 🤖</h5>
+            <h5> Experiences ⭐️</h5>
             <p class="text-content">
               As a futur engineer I could learn a lot a of different skills, firstly in technically (that I will present in the next part) moreover in and mainly in the project management.
               <br>
@@ -115,7 +115,7 @@
           <div class="text-side-container">
             <h5> Skills ⚙️ </h5>
             <p class="text-content">
-              Who says computer scientist must say programming langage and technical skills, let’s see some of them which I proficiency :
+              Who says computer scientist must say programming langage and technical skills, let’s see my main skills which I proficiency :
               <br>
               <br>
             </p>
@@ -127,8 +127,12 @@
                 <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
-                <p class="col-8 li-rating">Vue.js and React.js</p>
+                <p class="col-8 li-rating">SpringBoot</p>
                 <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                <p class="col-8 li-rating">Vue.js and React.js</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
                 <p class="col-8 li-rating">jQuery and Js</p>
@@ -136,35 +140,30 @@
               </div>
               <div class="skill-container">
                 <p class="col-8 li-rating">Python</p>
-                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
-              </div>
-              <div class="skill-container">
-                <p class="col-8 li-rating">SpringBoot</p>
-                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
-              </div>
-              <div class="skill-container">
-                <p class="col-8 li-rating">SQL and Hibernate</p>
-                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
                 <p class="col-8 li-rating">Flask</p>
-                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="3" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                <p class="col-8 li-rating">PostgreSql, MySql and SqlServer</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
                 <p class="col-8 li-rating">Flutter and Dart</p>
-                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
                 <p class="col-8 li-rating">NodeJs and Express</p>
-                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
                 <p class="col-8 li-rating">Git</p>
-                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="5" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
                 <p class="col-8 li-rating">And so much more 😉</p>
-                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
               </div>
 
             </div>
