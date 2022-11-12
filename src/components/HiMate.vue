@@ -29,6 +29,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut">Social</span>: {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">linkedIn</span>: <a title="Open linkedIn" href="https://www.linkedin.com/in/théo-barbary-047656201/" target="_blank" class="ref-console">'https://www.linkedin.com/in/théo-barbary-047656201/'</a>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">github</span>: <a title="Open gitlab" href="https://github.com/Barbary-Theo" target="_blank" class="ref-console">'https://github.com/Barbary-Theo'</a>,<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">gitlab</span>: <a title="Open gitlab" href="https://gitlab.com/Barbary-Theo" target="_blank" class="ref-console">'https://gitlab.com/Barbary-Theo'</a>,<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">gmail</span>: 'theo.barbary25@gmail.com',<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">phone</span>: '(+33) 06.24.19.10.35',<br>
@@ -79,10 +80,10 @@
           <div class="text-side-container">
             <h5> Experiences ⭐️</h5>
             <p class="text-content">
-              As a futur engineer I could learn a lot a of different skills, firstly in technically (that I will present in the next part) moreover in and mainly in the project management.
+              As a futur engineer I could learn a lot a of different skills, firstly in technically (that I will present in the next part) but also and mainly in the project management.
               <br>
               <br>
-              The company where I am and my school take care about my progress and trust in me, it allowed me to improve myself efficiency and with envy and finally to be able to lead some project from A to Z.
+              The company where I am and my school take care about my progress and trust in me, it allowed me to improve myself efficiency and with envy and finally to be able to lead some project to the beginning at the end.
               <br>
               <br>
               In addition, the traineeship that I realized 2 years ago during my DUT (technical university degree) also allowed me to improve my technical capacities and my decision making !

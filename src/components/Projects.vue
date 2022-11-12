@@ -13,27 +13,6 @@
 
         <v-card color="white" class="card-project width">
           <div class="card-title">
-            <v-card-title>Web Dofus Quest</v-card-title>
-          </div>
-
-          <v-card-text>
-
-            <div class="col-12">A project implementing an API with SpringBoot and a front in React.js</div>
-            <v-chip-group column class="spacer-2">
-              <v-chip outlined label color="purple"> React </v-chip>
-              <v-chip outlined label color="green"> SpringBoot </v-chip>
-              <v-chip outlined label color="red"> Java </v-chip>
-              <v-chip outlined label color="blue"> Sql </v-chip>
-            </v-chip-group>
-            <div class="spacer-2 btn-github">
-              <v-btn @click="openSpring" elevation="3" fab><v-icon large color="blue darken-4">{{icon.mdiGithub}}</v-icon> </v-btn>
-            </div>
-          </v-card-text>
-
-        </v-card>
-
-        <v-card color="white" class="card-project width">
-          <div class="card-title">
             <v-card-title>Project "Gone"</v-card-title>
           </div>
 
@@ -192,6 +171,27 @@
 
         <v-card color="white" class="card-project width">
           <div class="card-title">
+            <v-card-title>Web Dofus Quest</v-card-title>
+          </div>
+
+          <v-card-text>
+
+            <div class="col-12">A project implementing an API with SpringBoot and a front in React.js</div>
+            <v-chip-group column class="spacer-2">
+              <v-chip outlined label color="purple"> React </v-chip>
+              <v-chip outlined label color="green"> SpringBoot </v-chip>
+              <v-chip outlined label color="red"> Java </v-chip>
+              <v-chip outlined label color="blue"> Sql </v-chip>
+            </v-chip-group>
+            <div class="spacer-2 btn-github">
+              <v-btn @click="openSpring" elevation="3" fab><v-icon large color="blue darken-4">{{icon.mdiGithub}}</v-icon> </v-btn>
+            </div>
+          </v-card-text>
+
+        </v-card>
+
+        <v-card color="white" class="card-project width">
+          <div class="card-title">
             <v-card-title> Check my other projects </v-card-title>
           </div>
 
@@ -242,39 +242,39 @@ export default {
     },
 
     openSpring: () => {
-      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+      window.open("https://github.com/Barbary-Theo/FISA3-dofus-quest", "_blank")
     },
 
     openGone: () => {
-      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+      window.open("https://github.com/Barbary-Theo/Perso-gone", "_blank")
     },
 
     opneOthello: () => {
-      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+      window.open("https://github.com/Barbary-Theo/FISA4-IA-Othello", "_blank")
     },
 
     openOsps: () => {
-      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+      window.open("https://github.com/Barbary-Theo/FISA4-OSPS", "_blank")
     },
 
     openPorteFolio: () => {
-      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+      window.open("https://github.com/Barbary-Theo/Perso-hi-mate", "_blank")
     },
 
     openAutomates: () => {
-      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+      window.open("https://github.com/Barbary-Theo/FISA3-automates", "_blank")
     },
 
     openCartographers: () => {
-      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+      window.open("https://github.com/Barbary-Theo/Perso-cartographers-web", "_blank")
     },
 
     openLex: () => {
-      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+      window.open("https://github.com/Barbary-Theo/FISA3-compilation", "_blank")
     },
 
     open3D: () => {
-      window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
+      window.open("https://github.com/Barbary-Theo/DUT2-modelisation", "_blank")
     },
 
     displayProjectByScreenSize: function () {
