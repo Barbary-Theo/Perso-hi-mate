@@ -9,7 +9,7 @@
     </div>
 
     <div class="container-fluid" style="margin-top: 5vh;">
-      <div class="row" style="display: flex; flex-direction: row; justify-content: space-around;">
+      <div class="row" style="display: flex; flex-direction: row; justify-content: center;">
 
         <v-card color="white" class="card-project width">
           <div class="card-title">
@@ -188,6 +188,25 @@
               <v-btn @click="open3D" elevation="3" fab><v-icon large color="deep-purple darken-4">{{icon.mdiGithub}}</v-icon> </v-btn>
             </div>
           </v-card-text>
+        </v-card>
+
+        <v-card color="white" class="card-project width">
+          <div class="card-title">
+            <v-card-title> Check my other projects </v-card-title>
+          </div>
+
+        <v-card-text>
+
+          <div class="col-12"> You can check my 30, or more, other repositories </div>
+          <v-chip-group column class="spacer-2">
+            <v-chip outlined label color="red"> Prolog </v-chip>
+            <v-chip outlined label color="green"> Shell </v-chip>
+            <v-chip outlined label color="purple"> ... </v-chip>
+          </v-chip-group>
+          <div class="spacer-2 btn-github" style="position: absolute; left: 0; right:0; bottom: 1vh; ">
+            <v-btn @click="openRepo" elevation="3" fab><v-icon large color="black">{{icon.mdiGithub}}</v-icon> </v-btn>
+          </div>
+        </v-card-text>
 
         </v-card>
 
@@ -217,6 +236,10 @@ export default {
     extraSmallScreen: $(window).width() <= 600
   }),
   methods: {
+
+    openRepo: () => {
+      window.open("https://github.com/Barbary-Theo?tab=repositories", "_blank")
+    },
 
     openSpring: () => {
       window.open("https://gitlab.com/Barbary-Theo/web_dofus_quest", "_blank")
