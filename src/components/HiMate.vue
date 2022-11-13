@@ -53,7 +53,7 @@
           </div>
 
           <div class="text-side-container">
-            <h5> Hi everyone ! I’m glad your are here. 🙂 </h5>
+            <h3> Hi everyone ! I’m glad your are here. 🙂 </h3>
             <p class="text-content">
             I’m a simple software engineer apprenticeship, I work in Toyota Motor Manufacturing France and a student in INSA Hauts-de-France. Let’s learn some informations about me !<br>
             <br>
@@ -78,7 +78,7 @@
           </div>
 
           <div class="text-side-container">
-            <h5> Experiences ⭐️</h5>
+            <h3> Experiences ⭐️</h3>
             <p class="text-content">
               As a futur engineer I could learn a lot a of different skills, firstly in technically (that I will present in the next part) but also and mainly in the project management.
               <br>
@@ -114,7 +114,7 @@
           </div>
 
           <div class="text-side-container">
-            <h5> Skills ⚙️ </h5>
+            <h3> Skills ⚙️ </h3>
             <p class="text-content">
               Who says computer scientist must say programming langage and technical skills, let’s see my main skills which I proficiency :
               <br>
