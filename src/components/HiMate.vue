@@ -53,11 +53,11 @@
           </div>
 
           <div class="text-side-container">
-            <h3> Hi everyone ! I’m glad your are here. 🙂 </h3>
+            <h3> Hi everyone ! I’m glad your are here. </h3>
             <p class="text-content">
-            I’m a simple software engineer apprenticeship, I work in Toyota Motor Manufacturing France and a student in INSA Hauts-de-France. Let’s learn some informations about me !<br>
+            I’m a simple software engineer in apprenticeship, I work for Toyota Motor Manufacturing France and a student in INSA Hauts-de-France. Let’s learn some informations about me !<br>
             <br>
-            Liked I said I work in Toyota, basically the company’s values influence me a lot, for exemples the "Kaizen", that means the continuous improvement and the pleasure to learn so more, moreover 4S, my work’s quality and reliability !<br>
+            Liked I said I work for Toyota, basically the company’s values influence me a lot, for exemples the "Kaizen", that means the continuous improvement and the pleasure to learn so more, moreover 4S, my work’s quality and reliability !<br>
             </p>
           </div>
 
@@ -78,15 +78,15 @@
           </div>
 
           <div class="text-side-container">
-            <h3> Experiences ⭐️</h3>
+            <h3> Experiences </h3>
             <p class="text-content">
-              As a futur engineer I could learn a lot a of different skills, firstly in technically (that I will present in the next part) but also and mainly in the project management.
+              As a futur engineer I could learn a lot a of different skills, firstly in technical domain (that I will present in the next part) but also and mainly in the project management.
               <br>
               <br>
-              The company where I am and my school take care about my progress and trust in me, it allowed me to improve myself efficiency and with envy and finally to be able to lead some project to the beginning at the end.
+              The company where I am and my school take care about my progress and trust in me, it allowed me to improve myself efficiency and with envy to finally be able to lead some project to the beginning at the end.
               <br>
               <br>
-              In addition, the traineeship that I realized 2 years ago during my DUT (technical university degree) also allowed me to improve my technical capacities and my decision making !
+              In addition, the traineeship that I realized 2 years ago during a technical university degree (DUT in french) also allowed me to improve my technical capacities and my decision making !
             </p>
           </div>
 
@@ -114,7 +114,7 @@
           </div>
 
           <div class="text-side-container">
-            <h3> Skills ⚙️ </h3>
+            <h3> Skills️ </h3>
             <p class="text-content">
               Who says computer scientist must say programming langage and technical skills, let’s see my main skills which I proficiency :
               <br>
@@ -164,7 +164,7 @@
                 <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="5" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
-                <p class="col-12 li-rating" style="text-align: left !important;">And so much more 😉</p>
+                <p class="col-12 li-rating" style="text-align: left !important;">And so much more ! </p>
               </div>
 
             </div>
@@ -283,7 +283,7 @@ export default {
             &nbsp;&nbsp;&nbsp;&nbsp;- Nicolas c'est mon papa 🦖<br>
             &nbsp;&nbsp;&nbsp;&nbsp;- Younes c'est le plus malin 🐵<br>
             &nbsp;&nbsp;&nbsp;&nbsp;- Roman c'est le plus sportif 🦊<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- Basile c'est le plus petit 🐬<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Basile c'est le plus petit 🦦<br>
             &nbsp;&nbsp;&nbsp;&nbsp;- Martin c'est le plus fort 🦋<br>
             &nbsp;&nbsp;&nbsp;&nbsp;- Gio il est au max 🐊<br>
           </p>`);
