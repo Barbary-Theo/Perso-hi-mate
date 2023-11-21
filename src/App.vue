@@ -2,7 +2,6 @@
   <v-app>
     <v-main>
 
-      <MeBar/>
       <HiMate/>
 
     </v-main>
@@ -11,13 +10,11 @@
 
 <script>
 import HiMate from './components/HiMate';
-import MeBar from "@/components/MeBar";
 
 export default {
   name: 'App',
 
   components: {
-    MeBar,
     HiMate,
   },
 

@@ -17,7 +17,7 @@
             <div class="menu-console-text">Barbary's console</div>
           </div>
           <div class="menu-content" id="menu-content">
-            <p> Barbary-content-readme ~ % cat me.txt</p>
+            <p> Barbary-content-readme ~ % more me.txt</p>
             <p class="json-me"> &nbsp;&nbsp;<span style="color: #1B8814">me</span> = { <br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut">Name</span>: 'Barbary Théo',<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut">Nationality</span>: 'French',<br>

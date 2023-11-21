@@ -27,15 +27,15 @@
         <div style="margin-top: 1.5vh; display: flex; width: 100%; justify-content: space-around !important;">
 
            <span style="width: 20%; text-align: center">
-              <v-icon @click="openLinkedin" small color="#384454">{{ icon.mdiLinkedin }}</v-icon>
+              <v-icon @click="openLinkedin" small color="white">{{ icon.mdiLinkedin }}</v-icon>
             </span>
 
             <span style="width: 20%; text-align: center">
-              <v-icon @click="openGitLab" small color="#1E0F1C">{{ icon.mdiGitlab }}</v-icon>
+              <v-icon @click="openGitLab" small color="white">{{ icon.mdiGitlab }}</v-icon>
             </span>
 
             <span style="width: 20%; text-align: center">
-              <v-icon @click="openGitHub" small color="black">{{ icon.mdiGithub }}</v-icon>
+              <v-icon @click="openGitHub" small color="white">{{ icon.mdiGithub }}</v-icon>
             </span>
 
         </div>
