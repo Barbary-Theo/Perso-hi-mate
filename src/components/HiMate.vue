@@ -55,10 +55,15 @@
           <div class="text-side-container">
             <h3> Hi everyone ! I’m glad your are here. </h3>
             <p class="text-content">
-            I’m a simple software engineer in apprenticeship, I work for Toyota Motor Manufacturing France and a student in INSA Hauts-de-France. Let’s learn some informations about me !<br>
+                I’m a simple software engineer in apprenticeship, I work for <span class="underline bold"> Toyota Motor Manufacturing France </span> and I'm a student in INSA Hauts-de-France. <br> Let’s learn some informations about me !<br>
             <br>
-            Liked I said I work for Toyota, basically the company’s values influence me a lot, for exemples the "Kaizen", that means the continuous improvement and the pleasure to learn so more, moreover 4S, my work’s quality and reliability !<br>
+                Basically, <span class="underline bold">Toyota</span>’s values influence me a lot, for example :
             </p>
+              <div style="display: flex; flex-direction: column; justify-content: center; align-items: start; padding-top: 0 !important; padding-left: 0 !important;" class="text-content">
+                  <div> <v-icon dense color="primary">mdi-circle-medium</v-icon> The "Kaizen" (the continuous improvement and the pleasure to learn so more)</div>
+                  <div> <v-icon dense color="success">mdi-circle-medium</v-icon> The 4S </div>
+                  <div> <v-icon dense color="black">mdi-circle-medium</v-icon> My work’s quality and reliability </div>
+              </div>
           </div>
 
         </div>
@@ -80,14 +85,17 @@
           <div class="text-side-container">
             <h3> Experiences </h3>
             <p class="text-content">
-              As a futur engineer I could learn a lot a of different skills, firstly in technical domain (that I will present in the next part) but also and mainly in the project management.
+              As a futur engineer I could learn a lot a of different skills, firstly in technical domain and now in project management.
               <br>
               <br>
-              The company where I am and my school take care about my progress and trust in me, it allowed me to improve myself efficiency and with envy to finally be able to lead some project to the beginning at the end.
+              The company where I work and the school where I study take care about my progress and trust a lot in me, it allowed me to improve myself efficiency and with envy to finally be able to lead different projects from the beginning to the end.
               <br>
-              <br>
-              In addition, the traineeship that I realized 2 years ago during a technical university degree (DUT in french) also allowed me to improve my technical capacities and my decision making !
             </p>
+              <div style="display: flex; justify-content: space-evenly; align-items: center; width: 100%">
+                  <img alt="toyota" class="image-toyota" src="../assets/toyota.png"/>
+                  <img alt="toyota" class="image-insa" src="../assets/insa.png"/>
+                  <img alt="toyota" class="image-inopme" src="../assets/inopme.png"/>
+              </div>
           </div>
 
           <div v-if="!smallScreen" class="img-side-container">
@@ -116,7 +124,7 @@
           <div class="text-side-container">
             <h3> Skills️ </h3>
             <p class="text-content">
-              Who says computer scientist must say programming langage and technical skills, let’s see my main skills which I proficiency :
+                Let's check some of my <span class="underline bold"> technical skills </span> :
               <br>
               <br>
             </p>
@@ -124,47 +132,58 @@
             <div class="rating-container">
 
               <div class="skill-container">
-                <p class="col-8 li-rating">Java</p>
+                <v-icon color="primary">mdi-language-java</v-icon>
+                <p class="col-8 li-rating">&nbsp;&nbsp;Java</p>
                 <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
-                <p class="col-8 li-rating">SpringBoot</p>
+                  <v-icon dense color="success">mdi-leaf</v-icon>
+                <p class="col-8 li-rating">&nbsp;&nbsp;SpringBoot</p>
                 <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
-                <p class="col-8 li-rating">Vue.js and React.js</p>
+              <v-icon dense color="#2E7D32">mdi-vuejs</v-icon>
+                <p class="col-8 li-rating">&nbsp;&nbsp;Vue.js</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4" readonly x-small></v-rating>
+              </div>
+                <div class="skill-container">
+                <v-icon dense color="#087EA4">mdi-react</v-icon>
+                <p class="col-8 li-rating">&nbsp;&nbsp;React/Next.js</p>
                 <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
-                <p class="col-8 li-rating">jQuery and Js</p>
-                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4.5" readonly x-small></v-rating>
-              </div>
-              <div class="skill-container">
-                <p class="col-8 li-rating">Python</p>
+                  <v-icon dense color="#FFD600">mdi-language-python</v-icon>
+                <p class="col-8 li-rating">&nbsp;&nbsp;Python</p>
                 <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
-                <p class="col-8 li-rating">Flask</p>
+                  <v-icon dense color="black">mdi-flask</v-icon>
+                <p class="col-8 li-rating">&nbsp;&nbsp;Flask</p>
                 <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="3" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
-                <p class="col-8 li-rating">PostgreSql, MySql and SqlServer</p>
+                  <v-icon dense color="error">mdi-database</v-icon>
+                <p class="col-8 li-rating">&nbsp;&nbsp;PostgreSql, MySql and SqlServer</p>
                 <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
-                <p class="col-8 li-rating">Flutter and Dart</p>
+                  <v-icon dense color="grey">mdi-cellphone</v-icon>
+                <p class="col-8 li-rating">&nbsp;&nbsp;Flutter</p>
                 <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
-                <p class="col-8 li-rating">NodeJs and Express</p>
-                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="4" readonly x-small></v-rating>
-              </div>
-              <div class="skill-container">
-                <p class="col-8 li-rating">Git</p>
+                <v-icon dense color="warning">mdi-git</v-icon>
+                <p class="col-8 li-rating">&nbsp;&nbsp;Git</p>
                 <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="5" readonly x-small></v-rating>
               </div>
               <div class="skill-container">
-                <p class="col-12 li-rating" style="text-align: left !important;">And so much more ! </p>
+                  <v-icon dense color="#0277BD">mdi-docker</v-icon>
+                <p class="col-8 li-rating">&nbsp;&nbsp;Docker/Kubernetes</p>
+                <v-rating class="col-4" half-increments background-color="orange lighten-3" color="orange" value="3.5" readonly x-small></v-rating>
+              </div>
+              <div class="skill-container">
+                  <v-icon dense color="#D50000">mdi-code-json</v-icon>
+                <p class="col-12 li-rating" style="text-align: left !important;">&nbsp;&nbsp;And so much more ! </p>
               </div>
 
             </div>
@@ -356,7 +375,7 @@ export default {
   },
 
   mounted: function () {
-    document.title = '🌈 Barbary';
+    document.title = '⚙️Théo Barbary';
     this.initEvent();
   },
 
@@ -556,6 +575,21 @@ a {
 
 }
 
+.image-toyota {
+    width: 10vw;
+    height: auto;
+}
+
+.image-insa {
+    width: 10vw;
+    height: auto;
+}
+
+.image-inopme {
+    width: 10vw;
+    height: auto;
+}
+
 @media only screen and (max-width: 910px) {
 
   .img-side-container {
@@ -574,6 +608,21 @@ a {
     text-align: center;
     width: 100%;
   }
+
+    .image-toyota {
+        width: 20vw;
+        height: auto;
+    }
+
+    .image-insa {
+        width: 20vw;
+        height: auto;
+    }
+
+    .image-inopme {
+        width: 20vw;
+        height: auto;
+    }
 }
 
 .row-side {
@@ -594,6 +643,14 @@ a {
 
 .v-rating .v-icon {
   padding: 0.4vw !important;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 </style>

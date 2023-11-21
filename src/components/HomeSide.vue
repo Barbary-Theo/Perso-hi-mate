@@ -21,7 +21,7 @@
       <div class="spacer-30 flex-evenly">
           <div>
               <h1 class="presentation">Hi,</h1>
-              <h1 class="presentation">I'm <span style="text-decoration: underline; padding: 10px;">Théo Barbary</span></h1>
+              <h1 class="presentation">I'm <span class="barbary" style="text-decoration: underline; padding: 10px;">Théo Barbary</span></h1>
               <h1 class="presentation">A simple software engineer.</h1>
           </div>
 
@@ -103,7 +103,7 @@ export default {
     },
 
     initParams: function () {
-      document.title = '🌈 Barbary';
+      document.title = '⚙️Théo Barbary';
       this.date = this.getDateToDisplay();
 
       this.displayingDateInterval = setInterval( () => {
@@ -375,6 +375,20 @@ export default {
 
 .btn-arcade:active {
     transform: translate(1px, 1px) !important;
+}
+
+.barbary {
+    --bg-size: 400%;
+    background: linear-gradient(30deg, #63ff87, #338ac8, #63ff66) 0 0 /var(--bg-size) 100%;
+    color: transparent;
+    animation: move-bg 15s linear infinite;
+    -webkit-background-clip: text;
+}
+
+@keyframes move-bg {
+    100% {
+        background-position: var(--bg-size) 0;
+    }
 }
 
 </style>
