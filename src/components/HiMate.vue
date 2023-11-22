@@ -53,7 +53,7 @@
           </div>
 
           <div class="text-side-container">
-            <h3> Hi everyone ! I’m glad your are here. </h3>
+            <h3> Hi everyone ! I’m glad you're here. </h3>
             <p class="text-content">
                 I’m a simple software engineer in apprenticeship, I work for <span class="bold"> Toyota Motor Manufacturing France </span> and I'm a student in INSA Hauts-de-France. <br> Let’s learn some informations about me !<br>
             <br>
@@ -85,7 +85,7 @@
           <div class="text-side-container">
             <h3> Experiences </h3>
             <p class="text-content">
-              As a futur engineer I could learn a lot a of different skills, firstly in technical domain and now in project management.
+              As a future engineer I could learn a lot a of different skills, firstly in technical domain and now in project management.
               <br>
               <br>
               The company where I work and the school where I study take care about my progress and trust a lot in me, it allowed me to improve myself efficiency and with envy to finally be able to lead different projects from the beginning to the end.
