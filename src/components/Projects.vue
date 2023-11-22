@@ -371,6 +371,15 @@ export default {
     transform: scale(1, 1);
   }
 
+  .card-project::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-project {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
 }
 
 
@@ -385,6 +394,15 @@ export default {
     padding-left: 0 !important;
     z-index: 1;
     transform: scale(0, 0);
+  }
+
+  .card-project::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-project {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   .zoom-in-zoom-out-anim  {

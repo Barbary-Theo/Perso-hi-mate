@@ -6,40 +6,33 @@
 
     <div id="folio-side" class="folio-side">
 
-      <div v-if="showConsole" id="console-container" class="console-container translateX-animation">
-        <div class="console" id="console">
-          <div class="menu-console">
-            <div class="menu-console-button">
-              <v-icon class="icon" color="red" x-small>{{ icon.mdiBrightness1 }}</v-icon>
-              <v-icon class="icon" color="orange" x-small>{{ icon.mdiBrightness1 }}</v-icon>
-              <v-icon class="icon" color="green" x-small>{{ icon.mdiBrightness1 }}</v-icon>
+        <div v-if="showConsole" id="console-container" class="console-container translateX-animation">
+          <div class="console" id="console">
+
+            <div class="readme-content">Théo Barbary / README.md</div>
+
+            <div class="readme-container">
+              <div class="readme-content readme-console"> &nbsp;&nbsp;me = { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name 'Barbary Théo',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nationality: 'French',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_location: 'North of France',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;work: {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role: 'Software engineer',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;company: 'Toyota Motor Manufacturing France',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;school: 'INSA Hauts-de-France',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;social: {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;linkedin: <a title="Open linkedIn" href="https://www.linkedin.com/in/théo-barbary-047656201/" target="_blank" class="ref-console">'https://www.linkedin.com/in/théo-barbary-047656201/'</a>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;github: <a title="Open gitlab" href="https://github.com/Barbary-Theo" target="_blank" class="ref-console">'https://github.com/Barbary-Theo'</a>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gitlab: <a title="Open gitlab" href="https://gitlab.com/Barbary-Theo" target="_blank" class="ref-console">'https://gitlab.com/Barbary-Theo'</a>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gmail: 'theo.barbary25@gmail.com',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phone: '(+33) 06.24.19.10.35',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;}</div>
             </div>
-            <div class="menu-console-text">Barbary's console</div>
-          </div>
-          <div class="menu-content" id="menu-content">
-            <p> Barbary-content-readme ~ % more me.txt</p>
-            <p class="json-me"> &nbsp;&nbsp;<span style="color: #1B8814">me</span> = { <br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut">Name</span>: 'Barbary Théo',<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut">Nationality</span>: 'French',<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut">Current_location</span>: 'North of France',<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut">Work</span>: {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">Role</span>: 'Software engineer',<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">Company</span>: 'Toyota Motor Manufacturing France',<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">School</span>: 'INSA Hauts-de-France',<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut">Social</span>: {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">linkedIn</span>: <a title="Open linkedIn" href="https://www.linkedin.com/in/théo-barbary-047656201/" target="_blank" class="ref-console">'https://www.linkedin.com/in/théo-barbary-047656201/'</a>,<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">github</span>: <a title="Open gitlab" href="https://github.com/Barbary-Theo" target="_blank" class="ref-console">'https://github.com/Barbary-Theo'</a>,<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">gitlab</span>: <a title="Open gitlab" href="https://gitlab.com/Barbary-Theo" target="_blank" class="ref-console">'https://gitlab.com/Barbary-Theo'</a>,<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">gmail</span>: 'theo.barbary25@gmail.com',<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-attribut-second">phone</span>: '(+33) 06.24.19.10.35',<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-              &nbsp;}</p>
-            <p id="command-line-end" class="command-line-end"> Barbary-content-readme ~ % </p>
 
           </div>
         </div>
-      </div>
 
       <div id="presentation" class="presentation container-fluid spacer translateX-animation-origin">
 
@@ -400,16 +393,16 @@ export default {
 }
 
 .console {
-  background-color: #EDF1ED;
-  height: 60vh;
+  background-color: #333;
+  height: fit-content;
   width: 50vw;
   color: white;
-  border-radius: 1.4vh;
-  border: 1px solid lightgrey;
-  box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+  border-radius: 10px;
+  box-shadow: #fff 8px 8px 0 0, #000 8px 8px 0 1px;
   overflow-x: scroll;
   overflow-y: scroll;
   margin-top: 13vh;
+  padding: 2vh;
 }
 
 .menu-console {
@@ -483,7 +476,7 @@ export default {
 }
 
 .ref-console {
-  color: black !important;
+  color: white !important;
   text-decoration: none;
 }
 
@@ -651,6 +644,25 @@ a {
 
 .bold {
     font-weight: bold;
+}
+
+.readme-content {
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 0.85em;
+}
+
+.readme-container {
+  width: 100%;
+  height: fit-content;
+  background-color: #454545;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 2vh;
+  margin-top: 2vh;
+}
+
+.readme-console {
+  font-size: 0.75em;
 }
 
 </style>
