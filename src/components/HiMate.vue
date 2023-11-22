@@ -55,9 +55,9 @@
           <div class="text-side-container">
             <h3> Hi everyone ! I’m glad your are here. </h3>
             <p class="text-content">
-                I’m a simple software engineer in apprenticeship, I work for <span class="underline bold"> Toyota Motor Manufacturing France </span> and I'm a student in INSA Hauts-de-France. <br> Let’s learn some informations about me !<br>
+                I’m a simple software engineer in apprenticeship, I work for <span class="bold"> Toyota Motor Manufacturing France </span> and I'm a student in INSA Hauts-de-France. <br> Let’s learn some informations about me !<br>
             <br>
-                Basically, <span class="underline bold">Toyota</span>’s values influence me a lot, for example :
+                Basically, <span class="bold">Toyota</span>’s values influence me a lot, for example :
             </p>
               <div style="display: flex; flex-direction: column; justify-content: center; align-items: start; padding-top: 0 !important; padding-left: 0 !important;" class="text-content">
                   <div> <v-icon dense color="primary">mdi-circle-medium</v-icon> The "Kaizen" (the continuous improvement and the pleasure to learn so more)</div>

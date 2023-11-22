@@ -11,172 +11,172 @@
     <div class="container-fluid" style="margin-top: 5vh;">
       <div class="row" style="display: flex; flex-direction: row; justify-content: center;">
 
-        <v-card color="white" class="card-project width">
+        <div class="card-project card-project-style width">
           <div class="card-title">
-            <v-card-title>Project "Gone"</v-card-title>
+            <h1 style="font-size: 30px">Project "Gone"</h1>
           </div>
 
           <v-card-text>
 
-            <div class="col-12">A Trello like mobile project using flutter and firebase</div>
+            <div class="col-12 card-text-content">A Trello like mobile project using flutter and firebase</div>
             <v-chip-group column class="spacer-2">
               <v-chip outlined label color="indigo"> Flutter </v-chip>
               <v-chip outlined label color="indigo darken-3"> Dart </v-chip>
               <v-chip outlined label color="red"> Firebase </v-chip>
             </v-chip-group>
             <div class="spacer-2 btn-github">
-              <v-btn @click="openGone" elevation="3" fab><v-icon large color="teal darken-3">{{icon.mdiGithub}}</v-icon> </v-btn>
+              <v-btn @click="openGone" class="btn-github-content" fab><v-icon large color="teal darken-3">mdi-github</v-icon> </v-btn>
             </div>
           </v-card-text>
 
-        </v-card>
+        </div>
 
-        <v-card color="white" class="card-project width">
+          <div class="card-project card-project-style width">
           <div class="card-title">
-            <v-card-title> AI for Othello</v-card-title>
+              <h1 style="font-size: 30px"> AI for Othello</h1>
           </div>
 
           <v-card-text>
 
-            <div class="col-12">An artificial intelligence configurable which can beat you on Othello using python</div>
+            <div class="col-12 card-text-content">An artificial intelligence configurable which can beat you on Othello using python</div>
             <v-chip-group column class="spacer-2">
               <v-chip outlined label color="green"> Python </v-chip>
               <v-chip outlined label color="blue"> Mathematics </v-chip>
               <v-chip outlined label color="dark"> Complexity </v-chip>
             </v-chip-group>
             <div class="spacer-2 btn-github">
-              <v-btn @click="opneOthello" elevation="3" fab><v-icon large color="blue">{{icon.mdiGithub}}</v-icon> </v-btn>
+              <v-btn @click="opneOthello" class="btn-github-content" fab><v-icon large color="blue">mdi-github</v-icon> </v-btn>
             </div>
           </v-card-text>
 
-        </v-card>
+        </div>
 
-        <v-card color="white" class="card-project width">
+      <div class="card-project card-project-style width">
           <div class="card-title">
-            <v-card-title> System and secured prog</v-card-title>
+              <h1 style="font-size: 30px"> System and secured prog</h1>
           </div>
 
           <v-card-text>
 
-            <div class="col-12">Simulate server communication using sockets and watchdogs to secure communication</div>
+            <div class="col-12 card-text-content">Simulate server communication using sockets and watchdogs to secure communication</div>
             <v-chip-group column class="spacer-2">
               <v-chip outlined label color="green"> Python </v-chip>
               <v-chip outlined label color="green darken-4"> Linux </v-chip>
               <v-chip outlined label color="purple"> Security </v-chip>
             </v-chip-group>
             <div class="spacer-2 btn-github">
-              <v-btn @click="openOsps" elevation="3" fab><v-icon large>{{icon.mdiGithub}}</v-icon> </v-btn>
+              <v-btn @click="openOsps" class="btn-github-content" fab><v-icon large>mdi-github</v-icon> </v-btn>
             </div>
           </v-card-text>
 
-        </v-card>
+        </div>
 
-        <v-card color="white" class="card-project width">
+          <div class="card-project card-project-style width">
           <div class="card-title">
-            <v-card-title> PorteFolio</v-card-title>
+              <h1 style="font-size: 30px"> PorteFolio</h1>
           </div>
 
           <v-card-text>
 
-            <div class="col-12">Basically, the page where you are getting some fun 😉</div>
+            <div class="col-12 card-text-content">This beautiful page</div>
             <v-chip-group column class="spacer-2">
               <v-chip outlined label color="blue"> Vue.js </v-chip>
               <v-chip outlined label color="orange lighter-2"> Responsive </v-chip>
               <v-chip outlined label color="black"> User interface </v-chip>
             </v-chip-group>
             <div class="spacer-2 btn-github">
-              <v-btn @click="openPorteFolio" elevation="3" fab><v-icon large color="deep-orange darken-4">{{icon.mdiGithub}}</v-icon> </v-btn>
+              <v-btn @click="openPorteFolio"   class="btn-github-content" fab><v-icon large color="deep-orange darken-4">mdi-github</v-icon> </v-btn>
             </div>
           </v-card-text>
 
-        </v-card>
+        </div>
 
-        <v-card color="white" class="card-project width">
+          <div class="card-project card-project-style width">
           <div class="card-title">
-            <v-card-title> GPS simulation </v-card-title>
+              <h1 style="font-size: 30px"> GPS simulation </h1>
           </div>
 
           <v-card-text>
 
-            <div class="col-12">Implementation of a country GPS by checking schedule and different transport types </div>
+            <div class="col-12 card-text-content">Implementation of a country GPS by checking schedule and different transport types </div>
             <v-chip-group column class="spacer-2">
               <v-chip outlined label color="red"> Java </v-chip>
               <v-chip outlined label color="indigo darker-4"> Graph theory </v-chip>
             </v-chip-group>
             <div class="spacer-2 btn-github">
-              <v-btn @click="openAutomates" elevation="3" fab><v-icon large color="green">{{icon.mdiGithub}}</v-icon> </v-btn>
+              <v-btn @click="openAutomates"   class="btn-github-content" fab><v-icon large color="green">mdi-github</v-icon> </v-btn>
             </div>
           </v-card-text>
 
-        </v-card>
+        </div>
 
 
-        <v-card color="white" class="card-project width">
+          <div class="card-project card-project-style width">
           <div class="card-title">
-            <v-card-title> Cartographers game </v-card-title>
+              <h1 style="font-size: 30px"> Cartographers game </h1>
           </div>
 
           <v-card-text>
 
-            <div class="col-12">Cartographers is a multiplayer board game which can also be played versus AI </div>
+            <div class="col-12 card-text-content">Cartographers is a multiplayer board game which can also be played versus AI </div>
             <v-chip-group column class="spacer-2">
               <v-chip outlined label color="red"> Java </v-chip>
               <v-chip outlined label color="orange"> Java FX </v-chip>
             </v-chip-group>
             <div class="spacer-2 btn-github">
-              <v-btn @click="openCartographers" elevation="3" fab><v-icon large>{{icon.mdiGithub}}</v-icon> </v-btn>
+              <v-btn @click="openCartographers"   class="btn-github-content" fab><v-icon large>mdi-github</v-icon> </v-btn>
             </div>
           </v-card-text>
 
-        </v-card>
+        </div>
 
-        <v-card color="white" class="card-project width">
+          <div class="card-project card-project-style width">
           <div class="card-title">
-            <v-card-title> Pseudo compiler </v-card-title>
+              <h1 style="font-size: 30px"> Pseudo compiler </h1>
           </div>
 
           <v-card-text>
 
-            <div class="col-12">Creation of a pseudo compiler in C using Lex and Yacc</div>
+            <div class="col-12 card-text-content">Creation of a pseudo compiler in C using Lex and Yacc</div>
             <v-chip-group column class="spacer-2">
               <v-chip outlined label color="blue"> C </v-chip>
               <v-chip outlined label color="green darker-6"> Lex </v-chip>
               <v-chip outlined label color="black"> Yacc </v-chip>
             </v-chip-group>
             <div class="spacer-2 btn-github">
-              <v-btn @click="openLex" elevation="3" fab><v-icon large color="yellow accent-4">{{icon.mdiGithub}}</v-icon> </v-btn>
+              <v-btn @click="openLex"   class="btn-github-content" fab><v-icon large color="yellow accent-4">mdi-github</v-icon> </v-btn>
             </div>
           </v-card-text>
 
-        </v-card>
+        </div>
 
 
-        <v-card color="white" class="card-project width">
+          <div class="card-project card-project-style width">
           <div class="card-title">
-            <v-card-title> 3D modelization </v-card-title>
+              <h1 style="font-size: 30px"> 3D modelization </h1>
           </div>
 
           <v-card-text>
 
-            <div class="col-12">Create a 3D oceanic environment with submarine, floor and more ... </div>
+            <div class="col-12 card-text-content">Create a 3D oceanic environment with submarine, floor and more ... </div>
             <v-chip-group column class="spacer-2">
               <v-chip outlined label color="red"> Java </v-chip>
               <v-chip outlined label color="indigo"> Open GL </v-chip>
             </v-chip-group>
             <div class="spacer-2 btn-github">
-              <v-btn @click="open3D" elevation="3" fab><v-icon large color="deep-purple darken-4">{{icon.mdiGithub}}</v-icon> </v-btn>
+              <v-btn @click="open3D"   class="btn-github-content" fab><v-icon large color="deep-purple darken-4">mdi-github</v-icon> </v-btn>
             </div>
           </v-card-text>
-        </v-card>
+        </div>
 
-        <v-card color="white" class="card-project width">
+      <div class="card-project card-project-style width">
           <div class="card-title">
-            <v-card-title>Web Dofus Quest</v-card-title>
+              <h1 style="font-size: 30px"> Web Dofus Quest</h1>
           </div>
 
           <v-card-text>
 
-            <div class="col-12">A project implementing an API with SpringBoot and a front in React.js</div>
+            <div class="col-12 card-text-content">A project implementing an API with SpringBoot and a front in React.js</div>
             <v-chip-group column class="spacer-2">
               <v-chip outlined label color="purple"> React </v-chip>
               <v-chip outlined label color="green"> SpringBoot </v-chip>
@@ -184,31 +184,31 @@
               <v-chip outlined label color="blue"> Sql </v-chip>
             </v-chip-group>
             <div class="spacer-2 btn-github">
-              <v-btn @click="openSpring" elevation="3" fab><v-icon large color="blue darken-4">{{icon.mdiGithub}}</v-icon> </v-btn>
+              <v-btn @click="openSpring"   class="btn-github-content" fab><v-icon large color="blue darken-4">mdi-github</v-icon> </v-btn>
             </div>
           </v-card-text>
 
-        </v-card>
+        </div>
 
-        <v-card color="white" class="card-project width">
+      <div class="card-project card-project-style width">
           <div class="card-title">
-            <v-card-title> Check my other projects </v-card-title>
+              <h1 style="font-size: 30px"> Check my other projects </h1>
           </div>
 
         <v-card-text>
 
-          <div class="col-12"> You can check my 30, or more, other repositories </div>
+          <div class="col-12 card-text-content"> You can check my 30, or more, other repositories </div>
           <v-chip-group column class="spacer-2">
             <v-chip outlined label color="red"> Prolog </v-chip>
             <v-chip outlined label color="green"> Shell </v-chip>
             <v-chip outlined label color="purple"> ... </v-chip>
           </v-chip-group>
           <div class="spacer-2 btn-github">
-            <v-btn @click="openRepo" elevation="3" fab><v-icon large color="black">{{icon.mdiGithub}}</v-icon> </v-btn>
+            <v-btn @click="openRepo"   class="btn-github-content" fab><v-icon large color="black">mdi-github</v-icon> </v-btn>
           </div>
         </v-card-text>
 
-        </v-card>
+        </div>
 
       </div>
     </div>
@@ -337,6 +337,28 @@ export default {
 
 <style scoped>
 
+.card-project-style {
+    z-index: 200;
+    border: 2px solid #150C09;
+    border-radius: 5px;
+    color: #150C09;
+    display: block;
+    word-wrap: none;
+    box-shadow: 3px 3px 0 #150C09;
+    transition: all .1s ease;
+    cursor: pointer;
+    background-color: white;
+}
+
+.card-project-style:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px #150C09 !important;
+}
+
+.card-project-style:active {
+    transform: translate(1px, 1px) !important;
+}
+
 @media only screen and (max-width: 600px) {
 
   .card-project {
@@ -345,7 +367,6 @@ export default {
     overflow-y: scroll;
     padding-right: 0 !important;
     padding-left: 0 !important;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
     z-index: 1;
     transform: scale(1, 1);
   }
@@ -362,7 +383,6 @@ export default {
     overflow-y: scroll;
     padding-right: 0 !important;
     padding-left: 0 !important;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
     z-index: 1;
     transform: scale(0, 0);
   }
@@ -397,7 +417,7 @@ export default {
 }
 
 .spacer-2 {
-  margin-top: 1vh;
+  margin-top: 2vh;
 }
 
 @media only screen and (max-width: 900px) {
@@ -465,7 +485,40 @@ export default {
   display: flex;
   text-align: center;
   justify-content: center;
-  border-bottom: 1px solid lightgrey
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding: 0 5px !important;
+}
+
+.card-title > h1 {
+    margin-bottom: 0 !important;
+}
+
+.card-text-content {
+    font-size: 18px;
+}
+
+.btn-github-content {
+    border: 2px solid #150C09;
+    color: #150C09;
+    display: block;
+    padding: 15px 16px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    word-wrap: none;
+    box-shadow: 2px 2px 0 #150C09;
+    text-decoration: none;
+    line-height: 21px;
+    font-family: "Nunito Sans", sans-serif;
+    margin-top: 7px !important;
+    transition: all .1s ease;
+    cursor: pointer;
+}
+
+.btn-github-content:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px #150C09 !important;
 }
 
 </style>
