@@ -4,7 +4,8 @@ module.exports = {
   ],
   devServer: {
     allowedHosts: 'all',
-    host: 'barbary-theo.com',
+    host: '0.0.0.0',
+    port: 8080,
     proxy: {
       // Proxy all requests to your local server
       '/': {
