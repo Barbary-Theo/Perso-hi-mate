@@ -223,13 +223,10 @@ export default {
   data: () => ({
     icon: { mdiBrightness1 },
     alreadyShown: [false, false, false, false],
-    intervalCommandLine: null,
     idEleToScroll: ["#console-container", "#presentation", "#experiences", "#skills"],
-    textInputed: "",
     showConsole: $(window).width() >= 930,
     smallScreen: $(window).width() <= 930,
-    extraSmallScreen: $(window).width() <= 600,
-    sus: ""
+    extraSmallScreen: $(window).width() <= 600
   }),
 
   methods: {
@@ -261,89 +258,9 @@ export default {
               this.alreadyShown[index] = false;
             }
           } catch (error) {
-            this.sus = "";
+            console.debug(error);
           }
         })
-      });
-
-    },
-
-    initCommandLineAnimation: function() {
-
-      let cptCommandLine = 0;
-      let ele = $("#command-line-end");
-
-      this.intervalCommandLine = setInterval(() => {
-        if(cptCommandLine % 2 === 0) ele.removeClass("command-line-end")
-        else ele.addClass("command-line-end")
-        cptCommandLine ++;
-      }, 600)
-
-    },
-
-    enterFunction: function (elem) {
-
-      if(this.textInputed === "show Justine") {
-        this.treatementAfterEnterFunction(elem, `<p class="json-me" style="color: #756A92"> &nbsp;&nbsp; Justine c'est la plus belle 🦋 Et je l'aime 🌈</p>`);
-      }
-      else if(this.textInputed === "hello friend") {
-        this.treatementAfterEnterFunction(elem, `<p class="json-me" style="color: #756A92">
-            &nbsp;&nbsp;&nbsp;&nbsp;- Justine c'est la plus belle 🌈<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- Alexandre c'est le plus beau 🐝<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- Raphael c'est le plus chaud 🐻<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- Damien c'est un coquin 🦄<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- Nicolas c'est mon papa 🦖<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- Younes c'est le plus malin 🐵<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- Roman c'est le plus sportif 🦊<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- Basile c'est le plus petit 🦦<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- Martin c'est le plus fort 🦋<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- Gio il est au max 🐊<br>
-          </p>`);
-      }
-      else this.treatementAfterEnterFunction(elem, `<p class="json-me" style="color: #9E3F3F"> &nbsp;&nbsp; > Unknow command : '${this.textInputed}'</p>`);
-
-    },
-
-    treatementAfterEnterFunction: function(elem, newBalise) {
-      elem.remove()
-      let menuContent = $("#menu-content");
-      let console = $("#console");
-      menuContent.append(`<p> Barbary-content-readme ~ % ${this.textInputed} </p>`);
-      menuContent.append(newBalise);
-      menuContent.append(`<p id="command-line-end" class="command-line-end"> Barbary-content-readme ~ % </p>`);
-      this.textInputed = "";
-      this.initCommandLineAnimation();
-      console.scrollTop(console.height());
-    },
-
-    removeFunction: function (elem) {
-      if(elem.text().length > 28) {
-        this.textInputed = this.textInputed.substring(0, this.textInputed.length - 1);
-        elem.text(elem.text().substring(0, elem.text().length - 1));
-      }
-    },
-
-    initKeyDownEvent: function () {
-
-      $(document).on("keydown", (e) => {
-        let keyCode = e.originalEvent.keyCode;
-        let key = e.originalEvent.key;
-        let elem = $("#command-line-end");
-
-        if(keyCode === 32 && e.target === document.body) {
-          e.preventDefault();
-        }
-
-        if(key === "Enter") {
-         this.enterFunction(elem);
-        }
-        else if (key === "Backspace") {
-         this.removeFunction(elem);
-        }
-        else if((keyCode >= 65 && keyCode <= 90) || keyCode === 32) {
-          elem.text(elem.text() + key);
-          this.textInputed += key;
-        }
       });
 
     },
@@ -357,8 +274,6 @@ export default {
     initEvent: function () {
       this.displayProjectByScreenSize();
       this.initScrollAnimation();
-      this.initCommandLineAnimation();
-      this.initKeyDownEvent();
 
       $(window).resize(() => {
         this.displayProjectByScreenSize();
@@ -371,10 +286,6 @@ export default {
     document.title = '⚙️Théo Barbary';
     this.initEvent();
   },
-
-  beforeDestroy() {
-    this.intervalCommandLine = null;
-  }
 
 }
 </script>
@@ -405,36 +316,6 @@ export default {
   padding: 2vh;
 }
 
-.menu-console {
-  position: absolute;
-  width: 49.9vw;
-  border-top-left-radius: 1.3vh;
-  border-top-right-radius: 1.3vh;
-  background-color: #FAFAFA;
-  border-bottom: 1px solid lightgrey;
-  height: 4vh !important;
-  text-align: center;
-  align-items: center;
-}
-
-.menu-console-text {
-  color: black;
-  font-weight: bold;
-  font-size: 0.9vw;
-  align-items: center;
-  vertical-align: middle;
-  padding: 0.5vh;
-}
-
-.menu-console-button {
-  position: absolute;
-  left: 0.7vw;
-}
-
-.icon {
-  margin-left: 0.5vw;
-}
-
 .translateX-animation {
   transition-property: margin-left, opacity;
   opacity: 0;
@@ -447,32 +328,6 @@ export default {
   opacity: 0;
   margin-left: -24vw;
   transition: .5s ease;
-}
-
-.menu-content {
-  margin-top: 4vh;
-  color: black;
-  padding: 1vw;
-  font-size: 0.9vw;
-  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
-}
-
-.json-me {
-  font-size: 0.8vw;
-}
-
-.json-attribut {
-  color: #832525;
-}
-
-.json-attribut-second {
-  color: #AD7615;
-}
-
-.command-line-end {
-  padding-right: 0.2vw;
-  border-right: 2px solid grey;
-  width: fit-content;
 }
 
 .ref-console {

@@ -220,7 +220,6 @@
 
 <script>
 import $ from "jquery";
-import {mdiGithub} from "@mdi/js";
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -232,7 +231,6 @@ Vue.use(BootstrapVue)
 export default {
   name: "ProjectsPart",
   data: () => ({
-    icon: { mdiGithub },
     extraSmallScreen: $(window).width() <= 600
   }),
   methods: {

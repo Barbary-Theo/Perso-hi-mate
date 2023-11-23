@@ -1,9 +1,7 @@
 <template>
   <v-app>
     <v-main>
-
       <HiMate/>
-
     </v-main>
   </v-app>
 </template>
@@ -18,8 +16,6 @@ export default {
     HiMate,
   },
 
-  data: () => ({
-    //
-  }),
+  data: () => ({ }),
 };
 </script>

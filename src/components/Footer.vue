@@ -31,15 +31,6 @@
 </template>
 
 <script>
-import {
-  mdiBrightness1,
-  mdiCardAccountMail,
-  mdiEmail,
-  mdiGithub,
-  mdiGitlab,
-  mdiLinkedin,
-  mdiPhoneClassic
-} from "@mdi/js";
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -50,9 +41,7 @@ Vue.use(BootstrapVue)
 
 export default {
   name: "FooterPart",
-  data: () => ({
-    icon: { mdiBrightness1, mdiGithub, mdiGitlab, mdiLinkedin, mdiPhoneClassic, mdiEmail, mdiCardAccountMail}
-  }),
+  data: () => ({ }),
   methods: {
 
     openGitHub: () => {
@@ -80,7 +69,7 @@ export default {
 }
 
 .footer {
-    border-top: 2px solid black;
+  border-top: 2px solid black;
   width: 100%;
   height: fit-content;
   margin-bottom: 0 !important;

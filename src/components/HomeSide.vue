@@ -26,14 +26,14 @@
           </div>
 
           <div style="width: fit-content;">
-              <v-avatar size="200" class="avatar avatar-style" @mouseover="tst()" rounded>
+              <v-avatar size="200" class="avatar avatar-style" rounded>
                   <img src="../assets/me.png" alt="Hi, it's me">
               </v-avatar>
           </div>
       </div>
 
       <div class="flex-center-100 cursor padding" @click="scrollToInformation">
-          <v-icon color="white" id="to-scroll" large :class="classeIcon">{{ icon.mdiChevronDown }}</v-icon>
+          <v-icon color="white" id="to-scroll" large :class="classeIcon">mdi-chevron-down</v-icon>
       </div>
 
       <div class="flex-center-100 absolute">
@@ -47,42 +47,17 @@
 </template>
 
 <script>
-import {mdiChevronDown} from "@mdi/js";
 import $ from "jquery";
 
 export default {
   name: "OrangeSide",
   components: {},
   data: () => ({
-    icon: { mdiChevronDown },
-    date: null,
     classeIcon: 'icon-down ',
-    displayingDateInterval: null,
-    intervalSvg: null,
-    hover: false,
+    intervalSvg: null
   }),
 
   methods: {
-
-    getDateToDisplay: () => {
-      let date = new Date();
-
-      let hour = date.getHours().toString();
-      let minute = date.getMinutes().toString();
-      let second = date.getSeconds().toString()
-
-      if(hour.length === 1) {
-        hour = "0" + hour;
-      }
-      if(minute.length === 1) {
-        minute = "0" + minute;
-      }
-      if(second.length === 1) {
-        second = "0" + second;
-      }
-
-      return hour + ":" + minute + ":" + second;
-    },
 
     doAnimationScrollDown: function ()  {
 
@@ -99,16 +74,6 @@ export default {
         }, 500)
 
       }, 500)
-
-    },
-
-    initParams: function () {
-      document.title = '⚙️Théo Barbary';
-      this.date = this.getDateToDisplay();
-
-      this.displayingDateInterval = setInterval( () => {
-        this.date = this.getDateToDisplay();
-      }, 1000);
 
     },
 
@@ -150,23 +115,18 @@ export default {
     eventSvg: function () {
       $("#svg-item").hide();
       this.intervalSvg = setInterval(() => { this.treatementSvg(); }, 4000);
-    },
-
-      tst: function () {
-          this.hover = $(window).width() > 850;
-      }
+    }
 
   },
 
   mounted: function () {
-    this.initParams();
+    document.title = '⚙️Théo Barbary';
     this.initEvent();
     this.eventSvg();
     this.doAnimationScrollDown();
   },
 
   beforeDestroy() {
-    this.displayingDateInterval = null;
     this.intervalSvg = null;
   }
 
